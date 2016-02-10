@@ -5,7 +5,7 @@ var currentLocaleJSON;
 var defaultLocale = "english";
 
 // register default
-setLocale("english", function(success){
+setLocale("swedish", function(success){
     if (success) {
         console.log("Default locale registration succeeded");
     } else {
@@ -31,10 +31,12 @@ function setLocale(locale, completion) {
     });
 }
 
+// this function returns the localized content of the key
 function localizedString(key) {
     return currentLocaleJSON[key];
 }
 
+// this function should be used in HTML pages to have localized contents
 function writeLocalizedString(key) {
     document.write(localizedString(key));
 }
