@@ -12,6 +12,12 @@ class Person {
         this.password = password;
     }
 
+
+    // get the list of beers
+    // completion is a function accepting an boolean to indicate
+    // whether the operation is successful and
+    // an array of the beers if so
+
     getInventoryList(completion) {
         GET(this, "inventory_get", undefined, function(success, response){
             if (success) {
@@ -22,6 +28,11 @@ class Person {
         });
     }
 
+
+    // get the list of beers
+    // completion is a function accepting an boolean to indicate
+    // whether the operation is successful and
+    // an object of detailed beer if so
     getDrinkData(beer, completion) {
         if (beer.id == undefined) {
             completion(false, "undefined beer id");
