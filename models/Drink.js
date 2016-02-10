@@ -4,17 +4,20 @@
 "use strict"
 
 class Drink {
-    constructor(type, id, name, altName, price, discountPrice, count) {
-        this.type = type;
-        this.id = id;
-        this.name = name;
-        this.altName = altName;
-        this.price = price;
-        this.discountPrice = discountPrice;
-        this.count = count;
+    constructor(object) {
+        this.name = object["namn"];
+        this.altName = object["namn2"];
+        this.price = object["price"];
+        this.count = object["count"];
+        this.id = object["beer_id"];
     }
 
     customerSpecificPrice(customer) {
         return this.price
     }
+
+    // get the list of beers
+    // completion is a function accepting an boolean to indicate
+    // whether the operation is successful and
+    // an array of the beers if so
 }

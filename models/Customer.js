@@ -44,9 +44,20 @@ class Customer extends Person {
     // an integer for the credit if so
 
     getCredit(completion) {
-        GET(this, "iou_get", undefined, function(success, response){
+        getAccountInfo(function(success, response){
             if (success) {
                 completion(true, response["payload"][0]["assets"]);
+            } else {
+                completion(false, response);
+            }
+        });
+    }
+
+    //get the account info of this user, including first name, last name, id and asset.
+    getAccountInfo(completion) {
+        GET(this, "iou_get", undefined, function(success, response){
+            if (success) {
+                completion(true, response["payload"][0]);
             } else {
                 completion(false, response);
             }
