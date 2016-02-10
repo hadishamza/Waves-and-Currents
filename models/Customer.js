@@ -14,7 +14,7 @@ class Customer extends Person {
     getPurchases(completion) {
         GET(this, "purchases_get", undefined, function(success, response){
             if (success) {
-                completion(true, response);
+                completion(true, response["payload"]);
             } else {
                 completion(false, response);
             }
@@ -30,7 +30,7 @@ class Customer extends Person {
     getPayments(completion) {
         GET(this, "payments_get", undefined, function(success, response){
             if (success) {
-                completion(true, response);
+                completion(true, response["payload"]);
             } else {
                 completion(false, response);
             }
@@ -58,8 +58,33 @@ class Customer extends Person {
     // completion is a function accept one boolean to indicate
     // whether the operation is successful
 
-    buyDrink(drinkID, amount, completion) {
-        //TODO: call backend service to complete the buy drink action, need to append both purchase and payment
-        completion(true);
+    buyDrink(beer, completion) {
+        if (beer.id == undefined) {
+            completion(false, "undefined beer id");
+            return
+        }
+
+        if (beer.customerSpecificPrice(this) == undefined) {
+            completion(false, "undefined beer price");
+            return
+        }
+
+        GET(this, "purchases_append", {
+            "beer_id" : beer.id
+        }, function(success, response){
+            if (success) {
+                GET(this, "payments_append", {
+                    "amount" : beer.customerSpecificPrice(this)
+                }, function(success, response){
+                    if (success) {
+                        completion(true);
+                    } else {
+                        completion(false, response);
+                    }
+                });
+            } else {
+                completion(false, response);
+            }
+        });
     }
 }

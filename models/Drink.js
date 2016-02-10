@@ -13,4 +13,8 @@ class Drink {
         this.discountPrice = discountPrice;
         this.count = count;
     }
+
+    customerSpecificPrice(customer) {
+        return this.price
+    }
 }
