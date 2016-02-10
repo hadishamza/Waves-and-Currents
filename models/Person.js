@@ -1,6 +1,8 @@
 /**
  * Created by Jinghan on 9/2/16.
  */
+import "../libraries/jquery-2.2.0.min.js"
+
 class Person {
     var firstName, lastName, id, userName, password;
     constructor(firstName, lastName, id, userName, password) {
