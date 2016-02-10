@@ -2,7 +2,8 @@
  * Created by Jinghan on 8/2/16.
  */
 
-var baseURL = ""
+var baseURL = "http://pub.jamaica-inn.net/fpdb/api.php"
+var currentUser;
 
 function GET(person, action, data, completion) {
 
@@ -20,13 +21,41 @@ function GET(person, action, data, completion) {
     data["password"] = person.password;
 
     $.ajax({
-        url: "http://pub.jamaica-inn.net/fpdb/api.php",
+        url: baseURL,
         type: "get",
         data: data,
         success: function(response) {
             completion(true, response);
         }, error: function(message) {
             completion(false, message);
+        }
+    });
+}
+
+function logIn(userName, password, completion) {
+    // a little hack here, use 'payments_get_all' we can check whether
+    // the password is correct as well as the role of the logged in user
+    var tempPerson = new Person(undefined, undefined, undefined, userName, password);
+
+    GET(tempPerson, "payments_get_all", undefined, function(success, response){
+        if (success) {
+            var type = response["type"];
+            if (type === "payments_get_all") {
+                var administrator = new Administrator(undefined, undefined, undefined, userName, password);
+                completion(true, administrator);
+            } else {
+                var errorCode = response["payload"][0]["code"];
+                if (errorCode == 2) {
+                    completion(false, "Incorrect Password");
+                } else if (errorCode == 3) {
+                    var customer = new Customer(undefined, undefined, undefined, userName, password);
+                    completion(true, customer);
+                } else {
+                    completion(false, response);
+                }
+            }
+        } else {
+            completion(false, response);
         }
     });
 }

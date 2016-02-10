@@ -12,7 +12,6 @@ class Person {
         this.password = password;
     }
 
-
     // get the list of beers
     // completion is a function accepting an boolean to indicate
     // whether the operation is successful and
