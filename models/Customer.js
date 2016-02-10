@@ -1,7 +1,7 @@
 /**
  * Created by Jinghan on 8/2/16.
  */
-import "Person.js"
+"use strict"
 
 class Customer extends Person {
 
@@ -12,9 +12,13 @@ class Customer extends Person {
     // an array of the purchased record if so
 
     getPurchases(completion) {
-        //TODO: call backend service to get purchase array, then call the completion callback
-        var purchaseArray;
-        completion(true, purchaseArray);
+        GET(this, "purchases_get", undefined, function(success, response){
+            if (success) {
+                completion(true, response);
+            } else {
+                completion(false, response);
+            }
+        });
     }
 
 
@@ -24,9 +28,13 @@ class Customer extends Person {
     // an array of the purchased record if so
 
     getPayments(completion) {
-        //TODO: call backend service to get purchase array, then call the completion callback
-        var paymentArray;
-        completion(true, paymentArray);
+        GET(this, "payments_get", undefined, function(success, response){
+            if (success) {
+                completion(true, response);
+            } else {
+                completion(false, response);
+            }
+        });
     }
 
 
@@ -36,9 +44,13 @@ class Customer extends Person {
     // an integer for the credit if so
 
     getCredit(completion) {
-        //TODO: call backend service to get credit, then call the completion callback
-        var credit;
-        completion(true, credit);
+        GET(this, "iou_get", undefined, function(success, response){
+            if (success) {
+                completion(true, response["payload"][0]["assets"]);
+            } else {
+                completion(false, response);
+            }
+        });
     }
 
 
