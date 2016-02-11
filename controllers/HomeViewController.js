@@ -2,9 +2,9 @@
  * Created by Jinghan on 8/2/16.
  */
 
-logInAndReigsterCurrentUser("ervtod", "ervtod")
+logInAndRegisterCurrentUser("ervtod", "ervtod")
 
-function logInAndReigsterCurrentUser(userName, password) {
+function logInAndRegisterCurrentUser(userName, password) {
     logIn(userName, password, function(success, response) {
         if (success) {
             currentUser = response;
