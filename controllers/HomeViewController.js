@@ -2,8 +2,6 @@
  * Created by Jinghan on 8/2/16.
  */
 
-logInAndRegisterCurrentUser("ervtod", "ervtod")
-
 function logInAndRegisterCurrentUser(userName, password) {
     logIn(userName, password, function(success, response) {
         if (success) {
