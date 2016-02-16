@@ -4,14 +4,32 @@
 var currentLocaleJSON;
 var defaultLocale = "english";
 
-// register default
-setLocale("swedish", function(success){
-    if (success) {
-        console.log("Default locale registration succeeded");
-    } else {
-        console.log("Default locale registration failed");
-    }
-});
+// If user has not set a prefered locale then set to defualt
+// else set to users prefered locale
+if(sessionStorage.getItem('localeData') === null){
+    setLocale(defaultLocale, function(success){
+        if (success) {
+            console.log("Default locale registration succeeded");
+        } else {
+            console.log("Default locale registration failed");
+        }
+    });    
+} else {
+    currentLocaleJSON = JSON.parse(sessionStorage.getItem('localeData'));
+}
+
+// Help function for when setting the locale (e.g. button press)
+function setLocaleAux(locale){
+    setLocale(locale, function(success, data){
+        if (success){
+            sessionStorage.setItem('localeData', JSON.stringify(data));
+            location.reload();
+        }
+        else{
+            console.log("Setting locale failed");
+        }
+    })
+}
 
 
 // locale is the file name in localizations folder
@@ -24,9 +42,9 @@ function setLocale(locale, completion) {
         async: false,
         success: function(data) {
             currentLocaleJSON = data;
-            completion(true);
+            completion(true, data);
         }, error: function(message) {
-            completion(false);
+            completion(false, null);
         }
     });
 }
