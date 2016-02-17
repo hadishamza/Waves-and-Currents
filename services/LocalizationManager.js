@@ -39,6 +39,7 @@ function setLocale(locale, completion) {
     $.ajax({
         url: "../localizations/" + locale +".json",
         dataType: 'json',
+        cache: false,
         async: false,
         success: function(data) {
             currentLocaleJSON = data;
