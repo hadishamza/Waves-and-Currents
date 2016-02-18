@@ -1,5 +1,7 @@
 {
-  "welcome": "Välkommen!",
-  "username": "Användarnamn",
-  "password": "Lösenord"
+	"welcome": "Välkommen!",
+	"username": "Användarnamn",
+	"password": "Lösenord",
+	"login": "Logga in",
+    "continue": "Fortsätt utan log in"
 }

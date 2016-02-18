@@ -25,8 +25,11 @@
 <div>
 <script>writeLocalizedString("username")</script>:<input id="username_Field" type="text" name="username"><br>
 <script>writeLocalizedString("password")</script>:<input id="password_Field" type="password" name="password"><br>
-<input type="button" value="Log in" onclick="logIn(document.getElementById('username_Field').value, document.getElementById('password_Field').value)">
-<input type="button" value="Continue without login">
+<input type="button" id="logInButton" onclick="logInAndRegisterCurrentUser(document.getElementById('username_Field').value, document.getElementById('password_Field').value)">
+<input type="button" id="continueButton">
 </div>
 </body>
 </html>
+<!--- Button localization -->
+<script>document.getElementById("continueButton").setAttribute('value',localizedString('continue'))</script>
+<script>document.getElementById("logInButton").setAttribute('value',localizedString('login'))</script>
