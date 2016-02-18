@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Dutchman</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/default.css">
+    <script src="../controllers/HomeViewController.js"></script>
+    <script src="../libraries/jquery-2.2.0.min.js"></script>
+    <script src="../services/LocalizationManager.js"></script>
+    <script src="../services/BackendManager.js"></script>
+    <script src="../models/Person.js"></script>
+    <script src="../models/Customer.js"></script>
+    <script src="../models/Administrator.js"></script>
+    <script src="../models/Drink.js"></script>
+</head>
+<body>
+<div id="header">
+    <img class="flagIcon" src="assets/images/eng-icon.png" onclick="setLocaleAux('english');"/>
+    <img class="flagIcon" src="assets/images/swe-icon.png" onclick="setLocaleAux('swedish');"/>
+    <h1>Flying Dutchman</h1>
+    <div id="menu">
+    <button>Home</button>
+    <button>Beers</button>
+    <button>Events</button>
+    <button>About</button>
+    <button>Admin</button>
+    </div>
+    <div id="logOut"><button onclick="window.location = 'HomeView.html'">Log out</button></div>
+</div>
+</head>
+</body>
+<div id="welcomeText"><h1>Welcome Admin</h1></div>
+<div id="additionalInfoText"><h2 id="adminInfo">You are now logged in as an administrator</h2></div>
+
+<div id="mainContent">
+
+</div>
+<body>
+
+</body>
+</html>

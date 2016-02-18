@@ -1,3 +1,7 @@
 {
-    "key_sample": "sample"
+	"welcome": "Welcome!",
+	"username": "Username",
+	"password": "Password",
+	"logInButton": "Login",
+    "continueButton": "Continue without login"
 }

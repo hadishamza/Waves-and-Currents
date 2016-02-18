@@ -1,3 +1,7 @@
 {
-  "key_sample": "prov"
+	"welcome": "Välkommen!",
+	"username": "Användarnamn",
+	"password": "Lösenord",
+	"logInButton": "Logga in",
+    "continueButton": "Fortsätt utan log in"
 }
