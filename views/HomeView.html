@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Flying Dutchman</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/default.css">
+    <script src="../controllers/HomeViewController.js"></script>
     <script src="../libraries/jquery-2.2.0.min.js"></script>
     <script src="../services/LocalizationManager.js"></script>
     <script src="../services/BackendManager.js"></script>
@@ -11,13 +13,20 @@
     <script src="../models/Administrator.js"></script>
     <script src="../models/Drink.js"></script>
 </head>
-<div></div>
 <body>
+<div id="header">
+<img class="flagIcon" src="assets/images/eng-icon.png" onclick="setLocaleAux('english');"/>
+<img class="flagIcon" src="assets/images/swe-icon.png" onclick="setLocaleAux('swedish');"/>
 <h1>Flying Dutchman</h1>
-This is a piece of localized text: <script>writeLocalizedString("key_sample")</script>
-<input type="button" value="Eng" onclick="setLocaleAux('english');" />
-<input type="button" value="Swe" onclick="setLocaleAux('swedish');" />
+</div>
+<div id="section">
+<h1><script>writeLocalizedString("welcome")</script></h1>
+<div id="login">
+<div>
+<script>writeLocalizedString("username")</script>:<input id="username_Field" type="text" name="username"><br>
+<script>writeLocalizedString("password")</script>:<input id="password_Field" type="password" name="password"><br>
+<input type="button" value="Log in" onclick="logIn(document.getElementById('username_Field').value, document.getElementById('password_Field').value)">
+<input type="button" value="Continue without login">
+</div>
 </body>
 </html>
-
-<script src="../controllers/HomeViewController.js"></script>

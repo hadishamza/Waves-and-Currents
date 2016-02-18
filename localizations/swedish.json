@@ -1,3 +1,5 @@
 {
-  "key_sample": "prov"
+  "welcome": "Välkommen!",
+  "username": "Användarnamn",
+  "password": "Lösenord"
 }

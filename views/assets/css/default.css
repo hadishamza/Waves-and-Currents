@@ -1,0 +1,17 @@
+#header{
+	background-color: black;
+	color: white;
+	padding: 5px;
+}
+#header > h1{
+	text-align: center;
+	margin-top: 0px;
+}
+.flagIcon:hover{
+	cursor: pointer;
+}
+#section {
+    width:100%;
+    text-align:center;
+    padding:10px;	 	 
+}
