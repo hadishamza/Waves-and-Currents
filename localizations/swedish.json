@@ -2,6 +2,6 @@
 	"welcome": "Välkommen!",
 	"username": "Användarnamn",
 	"password": "Lösenord",
-	"login": "Logga in",
-    "continue": "Fortsätt utan log in"
+	"logInButton": "Logga in",
+    "continueButton": "Fortsätt utan log in"
 }

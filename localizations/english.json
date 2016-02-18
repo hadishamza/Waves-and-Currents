@@ -2,6 +2,6 @@
 	"welcome": "Welcome!",
 	"username": "Username",
 	"password": "Password",
-	"login": "Login",
-    "continue": "Continue without login"
+	"logInButton": "Login",
+    "continueButton": "Continue without login"
 }
