@@ -1,3 +1,8 @@
+body{
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+}
 #header{
 	background-color: black;
 	color: white;
@@ -29,6 +34,49 @@
 #adminInfo{
 	color: red;
 }
-#logOut{
-
+#leftMenu{
+	background-color:#aaa; 
+	height:800px;
+	width:15%;
+	float:left;
+}
+#menuTitle {
+	text-align: center; 
+	padding-top:15px;
+	text-decoration: underline;
+}
+#leftMenu > ul{
+	list-style: none;
+	padding-left: 20%;
+	font-size: large;
+}
+#mainContent{
+	background-color:#eee; 
+	height:800px;
+	width:70%;
+	float:left;
+	overflow: scroll;
+}
+#specials{
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-top: 3%;
+	padding: 1%;
+	border: black solid 1px;
+	border-radius: 15px;
+}
+#rightMenu{
+	background-color: #aaa; 
+	height: 800px;
+	width: 15%;
+	float: right;
+}
+#tray{
+	border-top: black solid 1px;
+	border-bottom: black solid 1px;
+	height: 80%;
+}
+#trayControl{
+	margin-top: 10%;
+	margin-left: 8%;
 }

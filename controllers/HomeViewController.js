@@ -7,9 +7,9 @@ function logInAndRegisterCurrentUser(userName, password) {
         if (success) {
             currentUser = response;
             if (response instanceof Administrator) {
-                window.location = "adminMain.html";
+                window.location = "admin/main.html";
             } else {
-                window.location = "memberMain.html";
+                window.location = "member/main.html";
             }
         }
     })

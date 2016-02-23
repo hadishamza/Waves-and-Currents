@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flying Dutchman</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/default.css">
+    <script src="../../controllers/HomeViewController.js"></script>
+    <script src="../../libraries/jquery-2.2.0.min.js"></script>
+    <script src="../../services/LocalizationManager.js"></script>
+    <script src="../../services/BackendManager.js"></script>
+    <script src="../../models/Person.js"></script>
+    <script src="../../models/Customer.js"></script>
+    <script src="../../models/Administrator.js"></script>
+    <script src="../../models/Drink.js"></script>
+</head>
+<body>
+<div id="header">
+    <img class="flagIcon" src="../assets/images/eng-icon.png" onclick="setLocaleAux('english');"/>
+    <img class="flagIcon" src="../assets/images/swe-icon.png" onclick="setLocaleAux('swedish');"/>
+    <h1>Flying Dutchman</h1>
+    <div id="menu">
+    <button>Home</button>
+    <button>Beers</button>
+    <button>Events</button>
+    <button>About</button>
+    </div>
+    <div id="logOut"><button onclick="window.location = '../HomeView.html'">Log out</button></div>
+</div>
+<div>
+  <div id="leftMenu">
+        <div id="menuTitle"><h2>Main Menu</h2></div>
+        <ul>
+            <li><a href="#">Beer</a></li>
+            <li><a href="#">Spirit</a></li>
+            <li><a href="#">Wine</a></li>
+        </ul>
+  </div>
+  <div id="mainContent">
+    <div id="welcomeText"><h1>Welcome</h1></div>
+    <div id="additionalInfoText"><h2>Hope you enjoy your stay.</h2></div>
+    <div id="specials">
+        <h2>Specials</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum felis, pharetra non tempor quis, pulvinar id nunc. Sed ultrices vulputate augue id suscipit. Sed cursus laoreet ex nec ullamcorper. Donec at sodales tortor. Nam pretium, sem nec sagittis dapibus, ligula neque bibendum justo, ut molestie neque urna vitae turpis.</p>
+    </div>
+    <div id="specials">
+        <h2>News</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum felis, pharetra non tempor quis, pulvinar id nunc. Sed ultrices vulputate augue id suscipit. Sed cursus laoreet ex nec ullamcorper. Donec at sodales tortor. Nam pretium, sem nec sagittis dapibus, ligula neque bibendum justo, ut molestie neque urna vitae turpis.</p>
+    </div>
+  </div>
+  <div id="rightMenu">
+      <div id="menuTitle"><h2>Tray</h2></div>
+      <div id="tray"></div>
+      <div id="trayControl">    
+        <button>Delete</button>
+        <button>Undo</button>
+        <button>Redo</button>
+        <button>Continue</button>
+      <div>
+  </div>
+</div>
+</body>
+</html>
