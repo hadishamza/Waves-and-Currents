@@ -6,7 +6,6 @@
     angular.module('mainApp', ['ngRoute'])
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
-                console.log($routeProvider.when)
                 $routeProvider
                     .when('/home', {
                         templateUrl: '/Waves and Currents/views/customer/welcome.html',
@@ -21,6 +20,9 @@
 
                 $locationProvider.html5Mode(true);
             }])
+        .run(function($rootScope, $location) {
+            $location.path( "/home" );
+        })
         .controller('MainViewController', ['$route', '$routeParams', '$location',
             function($route, $routeParams, $location) {
                 this.$route = $route;
