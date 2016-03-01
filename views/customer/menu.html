@@ -1,0 +1,65 @@
+<div ng-controller="CustomerMenuViewController" id="menuPage" style="height: 100%">
+    <div class="row" style="height: 100%">
+        <div class="col-md-12" style="height: 100%">
+            <div class="row" style="height: 100%">
+
+                <div class="col-md-9" style="height: 100%">
+                    <div class="row" style="height: 100%">
+                        <div class="col-md-2" style="height: 100%">
+                            <ul class="nav nav-pills nav-stacked navbar-inverse" style="height: 100%;">
+                                <li role="presentation"><a href="#">Beer</a></li>
+                                <li role="presentation"><a href="#"">Spirit</a></li>
+                                <li role="presentation"><a href="#">Wine</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-10" style="height: 100%; padding:0px">
+                            <div id="centralContent">
+                                <table style="height:100%;">
+                                    <colgroup>
+                                        <col style="width: 35%">
+                                        <col style="width: 65%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th class="columnName">Name</th>
+                                            <th class="columnPrice">Price</th>
+                                        </tr>
+                                        <tr ng-repeat="x in menu.currentBeverageList | filter : search">
+                                            <td class="columnName">{{ x.name }}</td>
+                                            <td class="columnPrice">{{ x.price }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3" style="height: 100%">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input ng-model="search" class="textField" type="text" class="form-control" placeholder="Search for...">
+                        </div>
+                    </div>
+                    <div class="row" style="height: 100%">
+                        <div class="col-md-12" style="height: 90.8%">
+                            <div id="rightMenu">
+                                <div id="menuHeader">
+                                    <strong>Your Order</strong>
+                                    <span>
+                                        <a href="#" ><i class="fa fa-rotate-left"></i></a>&nbsp
+                                        <a href="#" ><i class="fa fa-rotate-right"></i></a>
+                                    </span>
+                                </div>
+                                <div id="tray" style="height: 82.8%"></div>
+                                <div id="trayControl">
+                                    <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+                                    <button style="float: right;" type="button" class="btn btn-success">Proceed</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
