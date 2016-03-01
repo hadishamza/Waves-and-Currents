@@ -52,12 +52,50 @@ body{
 #menu{
 	text-align: center;
 }
+
 #additionalInfoText {
 	text-align: center;
 	font-size: smaller;
 }
 #adminInfo{
 	color: red;
+}
+
+#menuPage .nav {
+    border-radius: 5px;
+    border: black solid 1px;
+}
+
+#menuPage .nav li a {
+    color: #9d9d9d;
+    border-radius: 0px;
+}
+
+#menuPage .nav li a:hover {
+    color: white;
+    background-color:transparent;
+}
+
+#menuPage .nav li a:focus {
+    color:white;
+    background-color:black;
+}
+
+#menuPage .textField {
+    background: #222;
+    border-radius: 5px;
+    border: #111 solid 1px;
+    width: 100%;
+    height: 40px;
+    padding:10px;
+    color: #fff;
+
+    margin-bottom: 15px;
+}
+
+#menuPage .textField:focus {
+    outline-width: 0;
+    border-color: white;
 }
 
 #menuHeader {
@@ -70,8 +108,11 @@ body{
 
 #centralContent{
 	border-radius: 4px 4px 4px 4px;
-	background: rgba(255, 255, 255, 0.7);
+	background: #222;
+    border: black solid 1px;
 	height: 100%;
+    color: white;
+    padding:10px;
 }
 
 #specials{
@@ -83,9 +124,11 @@ body{
 }
 
 #rightMenu{
-	background: rgba(255, 255, 255, 0.7);
+    background: #222;
+    border: black solid 1px;
+    color: white;
 	height: 100%;
-	border-radius: 4px;
+	border-radius: 5px;
 }
 
 #tray{
