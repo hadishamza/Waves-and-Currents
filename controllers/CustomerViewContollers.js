@@ -36,5 +36,12 @@
         .controller('CustomerMenuViewController', ['$routeParams', function($routeParams) {
             this.name = "CustomerMenuViewController";
             this.params = $routeParams;
+
+            console.log(beers);
+            this.beerList = beers.map(function(a){return new Drink(a)});
+            this.wineList = [];
+            this.spiritList = [];
+
+            this.currentBeverageList = this.beerList;
         }]);
 })(window.angular);

@@ -14,6 +14,18 @@
                         </div>
                         <div class="col-md-10" style="height: 100%; padding:0px">
                             <div id="centralContent">
+                                <table style="height:100%;">
+                                    <thead>
+                                        <td class="columnName">Name</td>
+                                        <td class="columnPrice">Price</td>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="x in menu.currentBeverageList | filter : search">
+                                            <td class="columnName">{{ x.name }}</td>
+                                            <td class="columnPrice">{{ x.price }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -21,7 +33,7 @@
                 <div class="col-md-3" style="height: 100%">
                     <div class="row">
                         <div class="col-md-12">
-                            <input class="textField" type="text" class="form-control" placeholder="Search for...">
+                            <input ng-model="search" class="textField" type="text" class="form-control" placeholder="Search for...">
                         </div>
                     </div>
                     <div class="row" style="height: 100%">
