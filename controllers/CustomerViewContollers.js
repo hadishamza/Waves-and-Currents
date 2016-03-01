@@ -8,12 +8,12 @@
             function($routeProvider, $locationProvider) {
                 $routeProvider
                     .when('/home', {
-                        templateUrl: '/Waves and Currents/views/customer/welcome.html',
+                        templateUrl: '/Waves-and-Currents/views/customer/welcome.html',
                         controller: 'CustomerHomeViewController',
                         controllerAs: 'welcome'
                     })
                     .when('/menu', {
-                        templateUrl: '/Waves and Currents/views/customer/menu.html',
+                        templateUrl: '/Waves-and-Currents/views/customer/menu.html',
                         controller: 'CustomerMenuViewController',
                         controllerAs: 'menu'
                     });
