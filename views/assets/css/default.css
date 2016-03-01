@@ -117,8 +117,23 @@ body{
 
 #centralContent table {
     max-height:100% - 10px;
+    width: 100%;
     overflow-y:scroll;
     display: block;
+    table-layout:fixed;
+}
+
+#centralContent table th {
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+
+#centralContent .columnName {
+}
+
+#centralContent .columnPrice {
+    text-align: right;
 }
 
 #specials{
