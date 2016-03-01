@@ -13,6 +13,7 @@ body{
 #header{
 	color: white;
 	padding: 15px;
+	margin-top: 5px;
 }
 #header > nav{
 	text-align: center;
@@ -24,8 +25,8 @@ body{
 }
 
 #content {
-	margin: 20px;
-	border-radius: 5px;
+	margin: 0px 15px 15px 15px;
+	border-radius: 4px;
 	height: 600px;
 	/*background-color: rgba(255,255,255, 0.8);*/
 }
@@ -59,14 +60,16 @@ body{
 	color: red;
 }
 
-#menuTitle {
-	text-align: center; 
-	padding-top:15px;
-	text-decoration: underline;
+#menuHeader {
+	padding:10px;
+}
+
+#menuHeader span {
+    float: right;
 }
 
 #centralContent{
-	border-radius: 0px 0px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
 	background: rgba(255, 255, 255, 0.7);
 	height: 100%;
 }
@@ -86,12 +89,11 @@ body{
 }
 
 #tray{
-	border-top: black solid 1px;
-	border-bottom: black solid 1px;
-	height: 80%;
-	border-radius: 4px;
+	border-top: black solid 0.5px;
+	border-bottom: black solid 0.5px;
+	height: 400px;
 }
 #trayControl{
-	margin-top: 10%;
-	margin-left: 8%;
+    margin: 10px;
+    width: 100% - 20px;
 }
