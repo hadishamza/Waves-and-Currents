@@ -6,14 +6,17 @@
     angular.module('mainApp', ['ngRoute'])
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
+
+                var baseUrl = $(location).attr("pathname").replace("main.html", "");
+
                 $routeProvider
                     .when('/home', {
-                        templateUrl: '/Waves-and-Currents/views/customer/welcome.html',
+                        templateUrl: baseUrl + 'welcome.html',
                         controller: 'CustomerHomeViewController',
                         controllerAs: 'welcome'
                     })
                     .when('/menu', {
-                        templateUrl: '/Waves-and-Currents/views/customer/menu.html',
+                        templateUrl: baseUrl + 'menu.html',
                         controller: 'CustomerMenuViewController',
                         controllerAs: 'menu'
                     });
