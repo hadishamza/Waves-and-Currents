@@ -15,9 +15,18 @@
                         <div class="col-md-10" style="height: 100%; padding:0px">
                             <div id="centralContent">
                                 <div class="row scrollableBlock">
-                                    <div class="col-md-3 tileContainer" ng-repeat="x in menu.currentBeverageList | filter : search">
+                                    <div id="$index" class="col-md-3 tileContainer" ng-repeat="x in menu.currentBeverageList | filter : search">
                                         <div class="tile">
-                                            {{ x.name}}
+                                            <div class="row">
+                                                <div class="col-md-12 square">
+                                                    <img class="squareContent" src="{{ menu.baseUrl + '/views/assets/images/beverage-icons/beer-1.svg' }}">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 textContent" style="height: 50px">
+                                                    {{ x.name }}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

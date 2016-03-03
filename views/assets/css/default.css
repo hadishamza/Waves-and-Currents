@@ -128,11 +128,29 @@ body{
 }
 
 #centralContent .tile {
-	height: 150px;
 	border: black 1px solid;
 	margin-bottom: 15px;
 	border-radius: 5px;
 }
+
+#centralContent .tile img {
+    display: block;
+}
+
+#centralContent .tile .textContent {
+    width: calc(100% - 30px);
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(255, 255, 255, 0.1);
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+#centralContent .tile:hover {
+	border-color: white;
+}
+
 
 #specials{
 	margin-left: 8%;
@@ -158,4 +176,23 @@ body{
 #trayControl{
     margin: 10px;
     width: 100% - 20px;
+}
+
+.square {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.squareContent {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    margin-left: 17.5%;
 }
