@@ -135,6 +135,11 @@ body{
 
 #centralContent .tile img {
     display: block;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #centralContent .tile .textContent {
