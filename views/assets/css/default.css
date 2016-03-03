@@ -8,8 +8,6 @@ body{
 	background-size: cover;
 }
 
-
-
 #header{
 	color: white;
 	padding: 15px;
@@ -20,6 +18,12 @@ body{
 	margin-bottom: 0px;
 }
 
+#login-header {
+	color: white;
+	padding: 15px;
+	margin-top: 5px;
+	text-align: center;
+}
 .flagIcon {
 	margin-right: 10px;
 }

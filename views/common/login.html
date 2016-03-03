@@ -4,31 +4,49 @@
     <meta charset="UTF-8">
     <title>Flying Dutchman</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../../libraries/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../libraries/bootstrap/css/bootstrap.min.css">
+
+
+
     <script src="../../controllers/HomeViewController.js"></script>
     <script src="../../libraries/jquery-2.2.0.min.js"></script>
+    <script src="login.js"></script>
+    <!--- Element localization -->
     <script src="../../services/LocalizationManager.js"></script>
     <script src="../../services/BackendManager.js"></script>
     <script src="../../models/Person.js"></script>
     <script src="../../models/Customer.js"></script>
     <script src="../../models/Administrator.js"></script>
-    <script src="../../models/Drink.js"></script>
 </head>
 <body>
-<div id="header">
-<img class="flagIcon" src="../assets/images/eng-icon.png" onclick="setLocaleAux('english');"/>
-<img class="flagIcon" src="../assets/images/swe-icon.png" onclick="setLocaleAux('swedish');"/>
-<h1>Flying Dutchman</h1>
+    <div id="header">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Flying Ductchman</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+<div ng-controller="MainCtrl" class="container">
+<h1 id="login-header"> Welcome!</h1>
+    <modal title="Login form" visible="showModal">
+        <form role="form">
+            <div class="form-group">
+                <label for="email">Username</label>
+                <input type="email" class="form-control" id="email" placeholder="Username" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" />
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+            <button type="submit" class="btn btn-default">Continue without login</button>
+        </form>
+    </modal>
 </div>
-<div id="section">
-<h1><script>writeLocalizedString("welcome")</script></h1>
-<div id="login">
-<div>
-<script>writeLocalizedString("username")</script>:<input id="username_Field" type="text" name="username"><br>
-<script>writeLocalizedString("password")</script>:<input id="password_Field" type="password" name="password"><br>
-<input type="button" id="logInButton" onclick="logInAndRegisterCurrentUser(document.getElementById('username_Field').value, document.getElementById('password_Field').value)">
-<input type="button" id="continueButton" onclick="window.location='../customer/main.html'">
-</div>
+
 </body>
 </html>
-<!--- Element localization -->
-<script src="../../services/ElementLocalization.js"></script>
