@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../../libraries/bootstrap/css/bootstrap.min.css">
 
 
-
     <script src="../../controllers/HomeViewController.js"></script>
     <script src="../../libraries/jquery-2.2.0.min.js"></script>
     <script src="login.js"></script>
@@ -20,33 +19,69 @@
     <script src="../../models/Administrator.js"></script>
 </head>
 <body>
-    <div id="header">
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Flying Ductchman</a>
-                </div>
+<div id="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Flying Dutchman</a>
             </div>
-        </nav>
-    </div>
-
-<div ng-controller="MainCtrl" class="container">
-<h1 id="login-header"> Welcome!</h1>
-    <modal title="Login form" visible="showModal">
-        <form role="form">
-            <div class="form-group">
-                <label for="email">Username</label>
-                <input type="email" class="form-control" id="email" placeholder="Username" />
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password" />
-            </div>
-            <button type="submit" class="btn btn-default">Login</button>
-            <button type="submit" class="btn btn-default">Continue without login</button>
-        </form>
-    </modal>
+        </div>
+    </nav>
 </div>
+
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+
+        <!-- PAGE TITLE -->
+        <div id="login-header" class="login-header-box">
+            <h1>Welcome, please login!</h1>
+        </div>
+
+        <!-- SHOW ERROR/SUCCESS MESSAGES -->
+        <div id="messages"></div>
+
+        <!-- FORM -->
+        <form class="login-box">
+            <!-- NAME -->
+            <div id="name-group" class="form-group">
+                <label>Username</label>
+                <input type="text" name="name" class="form-control" placeholder="Username">
+                <span class="help-block"></span>
+            </div>
+
+            <!-- Password -->
+            <div id="password-group" class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password">
+                <span class="help-block"></span>
+            </div>
+
+            <!-- BUTTONS -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-share-alt"></span> Continue without login</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-play"></span> Login</button>
+        </form>
+
+    </div>
+</div>
+<!--<div class="container inverse" >
+    <form class="col-md-4 inverse" id="login-box">
+
+        <div class="form-group">
+            <input type="text" class="form-control input-lg" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control input-lg" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg btn-block"><span
+                    class="glyphicon glyphicon-share-alt"></span> Continue without login
+            </button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block"><span
+                    class="glyphicon glyphicon-play"></span> Login
+            </button>
+        </div>
+    </form>
+</div>-->
 
 </body>
 </html>
