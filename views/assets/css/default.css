@@ -112,29 +112,53 @@ body{
     border: black solid 1px;
 	height: 100%;
     color: white;
-    padding:10px;
+    padding:0px 15px 0px 30px;
+	overflow: scroll;
 }
 
-#centralContent table {
-    max-height:100% - 10px;
-    width: 100%;
-    overflow-y:scroll;
+#centralContent .tileContainer {
+	padding-left: 0px;
+}
+
+#centralContent .tileContainer:nth-child(1),
+#centralContent .tileContainer:nth-child(2),
+#centralContent .tileContainer:nth-child(3),
+#centralContent .tileContainer:nth-child(4) {
+	margin-top: 15px;
+}
+
+#centralContent .tile {
+	border: black 1px solid;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+#centralContent .tile img {
     display: block;
-    table-layout:fixed;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-#centralContent table th {
-    font-size: 15px;
-    padding-bottom: 10px;
+#centralContent .tile .textContent {
+    background: rgba(255, 255, 255, 0.1);
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 0px 0px 5px 5px;
+    width: calc(100% - 30px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
 }
 
-
-#centralContent .columnName {
+#centralContent .tile:hover {
+	border-color: white;
 }
 
-#centralContent .columnPrice {
-    text-align: right;
-}
 
 #specials{
 	margin-left: 8%;
@@ -149,7 +173,7 @@ body{
     border: black solid 1px;
     color: white;
 	height: 100%;
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 #tray{
@@ -159,5 +183,24 @@ body{
 }
 #trayControl{
     margin: 10px;
-    width: 100% - 20px;
+    width: calc(100% - 20px);
+}
+
+.square {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.squareContent {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    margin-left: 17.5%;
 }
