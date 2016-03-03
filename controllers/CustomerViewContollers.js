@@ -1,19 +1,23 @@
 /**
  * Created by Jinghan on 1/3/16.
  */
+var baseUrl;
 (function(angular) {
     'use strict';
     angular.module('mainApp', ['ngRoute'])
         .config(['$routeProvider', '$locationProvider',
             function($routeProvider, $locationProvider) {
+
+                baseUrl = $(location).attr("pathname").replace("views/customer/main.html", "");
+
                 $routeProvider
                     .when('/home', {
-                        templateUrl: '/Waves-and-Currents/views/customer/welcome.html',
+                        templateUrl: baseUrl + 'views/customer/welcome.html',
                         controller: 'CustomerHomeViewController',
                         controllerAs: 'welcome'
                     })
                     .when('/menu', {
-                        templateUrl: '/Waves-and-Currents/views/customer/menu.html',
+                        templateUrl: baseUrl + 'views/customer/menu.html',
                         controller: 'CustomerMenuViewController',
                         controllerAs: 'menu'
                     });
@@ -37,11 +41,11 @@
             this.name = "CustomerMenuViewController";
             this.params = $routeParams;
 
-            console.log(beers);
             this.beerList = beers.map(function(a){return new Drink(a)});
             this.wineList = [];
             this.spiritList = [];
 
             this.currentBeverageList = this.beerList;
+            this.baseUrl = baseUrl;
         }]);
 })(window.angular);
