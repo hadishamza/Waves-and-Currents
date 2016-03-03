@@ -14,22 +14,30 @@
                         </div>
                         <div class="col-md-10" style="height: 100%; padding:0px">
                             <div id="centralContent">
-                                <table style="height:100%;">
-                                    <colgroup>
-                                        <col style="width: 35%">
-                                        <col style="width: 65%">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th class="columnName">Name</th>
-                                            <th class="columnPrice">Price</th>
-                                        </tr>
-                                        <tr ng-repeat="x in menu.currentBeverageList | filter : search">
-                                            <td class="columnName">{{ x.name }}</td>
-                                            <td class="columnPrice">{{ x.price }}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="row scrollableBlock">
+                                    <div class="col-md-3 tileContainer" ng-repeat="x in menu.currentBeverageList | filter : search">
+                                        <div class="tile">
+                                            {{ x.name}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--<table style="height:100%;">-->
+                                    <!--<colgroup>-->
+                                        <!--<col style="width: 35%">-->
+                                        <!--<col style="width: 65%">-->
+                                    <!--</colgroup>-->
+                                    <!--<tbody>-->
+                                        <!--<tr>-->
+                                            <!--<th class="columnName">Name</th>-->
+                                            <!--<th class="columnPrice">Price</th>-->
+                                        <!--</tr>-->
+                                        <!--<tr ng-repeat="x in menu.currentBeverageList | filter : search">-->
+                                            <!--<td class="columnName">{{ x.name }}</td>-->
+                                            <!--<td class="columnPrice">{{ x.price }}</td>-->
+                                        <!--</tr>-->
+                                    <!--</tbody>-->
+                                <!--</table>-->
                             </div>
                         </div>
                     </div>
