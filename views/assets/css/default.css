@@ -143,13 +143,16 @@ body{
 }
 
 #centralContent .tile .textContent {
-    width: calc(100% - 30px);
-    text-align: center;
-    vertical-align: middle;
     background: rgba(255, 255, 255, 0.1);
     margin-left: 15px;
     margin-right: 15px;
     border-radius: 0px 0px 5px 5px;
+    width: calc(100% - 30px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
 }
 
 #centralContent .tile:hover {
@@ -180,7 +183,7 @@ body{
 }
 #trayControl{
     margin: 10px;
-    width: 100% - 20px;
+    width: calc(100% - 20px);
 }
 
 .square {
