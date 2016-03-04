@@ -9,22 +9,18 @@
 
     <script src="../../libraries/jquery-2.2.0.min.js"></script>
     <script src="../../controllers/HomeViewController.js"></script>
-<!--
-
-    <script src="../../services/LocalizationManager.js"></script>
     <script src="../../services/BackendManager.js"></script>
     <script src="../../models/Person.js"></script>
-    <script src="../../models/Customer.js"></script>
-    <script src="../../models/Administrator.js"></script>&ndash;&gt;
+
+    <script src="../../services/LocalizationManager.js"></script>
 
     <script src="../../controllers/HomeViewController.js"></script>
     <script src="../../libraries/jquery-2.2.0.min.js"></script>
     <script src="../../services/LocalizationManager.js"></script>
     <script src="../../services/BackendManager.js"></script>
-    <script src="../../models/Person.js"></script>
     <script src="../../models/Customer.js"></script>
     <script src="../../models/Administrator.js"></script>
-    <script src="../../models/Drink.js"></script>-->
+    <script src="../../models/Drink.js"></script>
 </head>
 <body>
 <div id="header">
@@ -64,11 +60,11 @@
                 <span class="help-block"></span>
                 <div class="login-buttons">
                     <!-- BUTTONS -->
-                    <button type="submit" id="test1" class="btn btn-primary" onclick="console.log(this)"><span class="glyphicon glyphicon-share-alt"></span>
+                    <div id="test1" class="btn btn-primary" onclick="window.location = '../customer/main.html';"><span class="glyphicon glyphicon-share-alt"></span>
                         Continue without login
-                    </button>
-                    <button type="submit" class="btn btn-primary" onclick="logInAndRegisterCurrentUser(document.getElementById('username_Field').value, document.getElementById('password_Field').value)"><span class="glyphicon glyphicon-play"></span> Login
-                    </button>
+                    </div>
+                    <div class="btn btn-primary" onclick="logInAndRegisterCurrentUser($('#username_Field').val(), $('#password_Field').val())"><span class="glyphicon glyphicon-play"></span> Login
+                    </div>
                 </div>
             </div>
         </form>

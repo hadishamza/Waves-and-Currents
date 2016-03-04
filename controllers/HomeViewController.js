@@ -3,17 +3,18 @@
  */
 
 function logInAndRegisterCurrentUser(userName, password) {
-    console.log(this);
-/*    logIn(userName, password, function(success, response) {
+
+    logIn(userName, password, function(success, response) {
+        alert(userName + " " + password);
         if (success) {
             currentUser = response;
             if (response instanceof Administrator) {
-                window.location = "admin/main.html";
+                window.location = "../admin/main.html";
             } else {
-                window.location = "member/main.html";
+                window.location = "../member/main.html";
             }
         }
-    })*/
+    })
 }
 
 $(".nav a").on("click", function(){
