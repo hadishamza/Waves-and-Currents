@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="../../libraries/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../libraries/bootstrap/css/bootstrap.min.css">
 
+    <script src="../../libraries/jquery-2.2.0.min.js"></script>
+    <script src="../../controllers/HomeViewController.js"></script>
+    <script src="../../services/BackendManager.js"></script>
+    <script src="../../models/Person.js"></script>
+
+    <script src="../../services/LocalizationManager.js"></script>
 
     <script src="../../controllers/HomeViewController.js"></script>
     <script src="../../libraries/jquery-2.2.0.min.js"></script>
-    <script src="login.js"></script>
-    <!--- Element localization -->
     <script src="../../services/LocalizationManager.js"></script>
     <script src="../../services/BackendManager.js"></script>
-    <script src="../../models/Person.js"></script>
     <script src="../../models/Customer.js"></script>
     <script src="../../models/Administrator.js"></script>
+    <script src="../../models/Drink.js"></script>
 </head>
 <body>
 <div id="header">
@@ -29,7 +33,7 @@
     </nav>
 </div>
 
-<div class="container">
+<div class="container" id="login-box">
     <div class="col-md-6 col-md-offset-3">
 
         <!-- PAGE TITLE -->
@@ -41,47 +45,30 @@
         <div id="messages"></div>
 
         <!-- FORM -->
-        <form class="login-box">
+        <form class="login-input-box">
             <!-- NAME -->
             <div id="name-group" class="form-group">
                 <label>Username</label>
-                <input type="text" name="name" class="form-control" placeholder="Username">
+                <input type="text" id="username_Field" name="username" class="form-control" placeholder="Username">
                 <span class="help-block"></span>
             </div>
 
             <!-- Password -->
             <div id="password-group" class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Password">
+                <input type="password" id="password_Field" name="password" class="form-control" placeholder="Password">
                 <span class="help-block"></span>
+                <div class="login-buttons">
+                    <!-- BUTTONS -->
+                    <div id="test1" class="btn btn-primary" onclick="window.location = '../customer/main.html';"><span class="glyphicon glyphicon-share-alt"></span>
+                        Continue without login
+                    </div>
+                    <div class="btn btn-primary" onclick="logInAndRegisterCurrentUser($('#username_Field').val(), $('#password_Field').val())"><span class="glyphicon glyphicon-play"></span> Login
+                    </div>
+                </div>
             </div>
-
-            <!-- BUTTONS -->
-            <button type="submit" class="btn btn-primary btn-lg btn-block"><span class="glyphicon glyphicon-share-alt"></span> Continue without login</button>
-            <button type="submit" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-play"></span> Login</button>
         </form>
-
     </div>
 </div>
-<!--<div class="container inverse" >
-    <form class="col-md-4 inverse" id="login-box">
-
-        <div class="form-group">
-            <input type="text" class="form-control input-lg" placeholder="Username">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control input-lg" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-lg btn-block"><span
-                    class="glyphicon glyphicon-share-alt"></span> Continue without login
-            </button>
-            <button type="submit" class="btn btn-primary btn-lg btn-block"><span
-                    class="glyphicon glyphicon-play"></span> Login
-            </button>
-        </div>
-    </form>
-</div>-->
-
 </body>
 </html>
