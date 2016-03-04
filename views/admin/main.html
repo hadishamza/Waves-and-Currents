@@ -4,38 +4,76 @@
     <meta charset="UTF-8">
     <title>Flying Dutchman</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/default.css">
-    <script src="../../controllers/HomeViewController.js"></script>
+    <link rel="stylesheet" href="../../libraries/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../libraries/bootstrap/css/bootstrap.min.css">
+
+    <script src="../../data/data.js"></script>
+    <script src="../../libraries/angular-js/angular.js"></script>
+    <script src="../../libraries/angular-js/angular-route.js"></script>
+    <script src="../../controllers/CustomerViewContollers.js"></script>
+
     <script src="../../libraries/jquery-2.2.0.min.js"></script>
     <script src="../../services/LocalizationManager.js"></script>
     <script src="../../services/BackendManager.js"></script>
     <script src="../../models/Person.js"></script>
     <script src="../../models/Customer.js"></script>
-    <script src="../../models/Administrator.js"></script>
     <script src="../../models/Drink.js"></script>
-</head>
-<body>
+    <script src="../../models/Administrator.js"></script>
+
+<body ng-app="mainApp"  ng-controller="MainViewController as main">
 <div id="header">
-    <img class="flagIcon" src="../assets/images/eng-icon.png" onclick="setLocaleAux('english');"/>
-    <img class="flagIcon" src="../assets/images/swe-icon.png" onclick="setLocaleAux('swedish');"/>
-    <h1>Flying Dutchman</h1>
-    <div id="menu">
-    <button>Home</button>
-    <button>Beers</button>
-    <button>Events</button>
-    <button>About</button>
-    <button>Admin</button>
-    </div>
-    <div id="logOut"><button onclick="window.location = '../common/login.html'">Log out</button></div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Flying Ductchman</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="/menu">Menu <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a>Tool 1</a></li>
+                            <li><a>Tool 2</a></li>
+                            <li><a>Tool 3</a></li>
+                            <li><a>Tool 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Themes<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a>Theme 1</a></li>
+                            <li><a>Theme 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:setLocaleAux('english');"><img class="flagIcon" src="../assets/images/eng-icon.png"/>  English</a></li>
+                            <li><a href="javascript:setLocaleAux('swedish');"><img class="flagIcon" src="../assets/images/swe-icon.png"/>  Swedish</a></li>
+                        </ul>
+                    </li>
+                    <li><a onclick= "window.location = '../common/login.html';">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>
-</head>
-</body>
-<div id="welcomeText"><h1>Welcome Admin</h1></div>
-<div id="additionalInfoText"><h2 id="adminInfo">You are now logged in as an administrator</h2></div>
-
-<div id="mainContent">
-
+<div id="content">
+    <div ng-view style="height: 100%"></div>
 </div>
-<body>
-
 </body>
 </html>
+
+<script src="../../controllers/HomeViewController.js"></script>
+<script src="../../libraries/bootstrap/js/bootstrap.min.js"></script>
