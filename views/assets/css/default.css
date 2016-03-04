@@ -215,6 +215,7 @@ body{
 
 #centralContent .tile:hover {
 	border-color: white;
+    cursor: pointer;
 }
 
 .tableCellTitle {
