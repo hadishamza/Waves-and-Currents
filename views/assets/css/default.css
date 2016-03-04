@@ -206,11 +206,16 @@ body{
     height: 50px;
 }
 
-
-
 #centralContent .tile:hover {
 	border-color: white;
 }
+
+.tableCellTitle {
+    padding-right: 20px;
+    /*text-align: right;*/
+    width: 30%;
+}
+
 
 
 #specials{
