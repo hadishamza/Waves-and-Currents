@@ -3,7 +3,8 @@
  */
 
 function logInAndRegisterCurrentUser(userName, password) {
-    logIn(userName, password, function(success, response) {
+    console.log(this);
+/*    logIn(userName, password, function(success, response) {
         if (success) {
             currentUser = response;
             if (response instanceof Administrator) {
@@ -12,7 +13,7 @@ function logInAndRegisterCurrentUser(userName, password) {
                 window.location = "member/main.html";
             }
         }
-    })
+    })*/
 }
 
 $(".nav a").on("click", function(){
