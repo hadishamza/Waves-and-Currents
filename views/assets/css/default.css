@@ -1,14 +1,42 @@
 body{
-	margin: 0px;
-	height: 100%;
-	width: 100%;
 	background-image: url("../images/header-background.jpg");
 	background-repeat: no-repeat;
-	background-position: center;
 	background-size: cover;
+    background-position: top;
+}
+
+#login-box {
+    padding-top: 5%;
+    position: static;
 }
 
 
+.login-button {
+    width: 100%;
+}
+
+.login-header-box {
+    horiz-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-radius: 5px 5px 0px 0px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-input-box {
+    horiz-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-radius: 0px 0px 5px 5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.form-group {
+        color: white;
+}
 
 #header{
 	color: white;
@@ -20,6 +48,12 @@ body{
 	margin-bottom: 0px;
 }
 
+#login-header {
+	color: white;
+	padding: 15px;
+	margin-top: 5px;
+	text-align: center;
+}
 .flagIcon {
 	margin-right: 10px;
 }
@@ -179,11 +213,16 @@ body{
     height: 50px;
 }
 
-
-
 #centralContent .tile:hover {
 	border-color: white;
 }
+
+.tableCellTitle {
+    padding-right: 20px;
+    /*text-align: right;*/
+    width: 30%;
+}
+
 
 
 #specials{

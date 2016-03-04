@@ -1440,3 +1440,32 @@ var beers = [
         "price": "16.90"
     }
 ];
+
+var beerDetails = {
+    "157503": {
+        "nr": "157503",
+        "artikelid": "26775",
+        "varnummer": "1575",
+        "namn": "Anchor Steam Beer",
+        "namn2": "",
+        "prisinklmoms": "23.90",
+        "volymiml": "",
+        "prisperliter": "",
+        "saljstart": "2000-12-04",
+        "slutlev": " ",
+        "varugrupp": "Öl, Specialöl",
+        "forpackning": "Flaska",
+        "forslutning": "",
+        "ursprung": "",
+        "ursprunglandnamn": "USA",
+        "producent": "Anchor Brewing Company",
+        "leverantor": "Cask Sweden AB",
+        "argang": "",
+        "provadargang": "",
+        "alkoholhalt": "4.8%",
+        "modul": "",
+        "sortiment": "FS",
+        "ekologisk": "0",
+        "koscher": "0"
+    }
+}

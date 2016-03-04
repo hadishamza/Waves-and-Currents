@@ -3,13 +3,14 @@
  */
 
 function logInAndRegisterCurrentUser(userName, password) {
+
     logIn(userName, password, function(success, response) {
         if (success) {
             currentUser = response;
             if (response instanceof Administrator) {
-                window.location = "admin/main.html";
+                window.location = "../admin/main.html";
             } else {
-                window.location = "member/main.html";
+                window.location = "../customer/main.html";
             }
         }
     })
