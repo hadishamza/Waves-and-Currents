@@ -76,14 +76,56 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="beverageDetailLabelName">Beck's</h4>
+                <h4 class="modal-title" id="beverageDetailLabelName"></h4>
+                <h6 id="beverageAvailableAmount"></h6>
             </div>
             <div class="modal-body">
-                <div id="beverageAvailableAmount"></div>
+                <table style="table-layout: fixed; width:100%">
+                <tr>
+                    <td class="tableCellTitle"><strong>Alcohol Level</strong></td>
+                    <td class="tableCellContent"><div id="beverageAlcoholLevel"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Year</strong></td>
+                    <td class="tableCellContent"><div id="beverageYear"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Packaging</strong></td>
+                    <td class="tableCellContent"><div id="beveragePackaging"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Distributor</strong></td>
+                    <td class="tableCellContent"><div id="beverageDistributor"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Producer</strong></td>
+                    <td class="tableCellContent"><div id="beverageProducer"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Sampling</strong></td>
+                    <td class="tableCellContent"><div id="beverageSampling"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Selection</strong></td>
+                    <td class="tableCellContent"><div id="beverageSelection"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Country of Origin</strong></td>
+                    <td class="tableCellContent"><div id="beverageOriginCountry"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Group</strong></td>
+                    <td class="tableCellContent"><div id="beverageGroup"></div></td>
+                </tr>
+                <tr>
+                    <td class="tableCellTitle"><strong>Volume</strong></td>
+                    <td class="tableCellContent"><div id="beverageVolume"></div></td>
+                </tr>
+                </table>
             </div>
             <div class="modal-footer">
-                <h5 class="modal-title" id="beverageDetailLabelPrice">KR300</h5>
-                <br>
+                <strong class="modal-title" id="beverageDetailLabelPrice"></strong>
+                <br><br>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Add to Your Tray</button>
             </div>
