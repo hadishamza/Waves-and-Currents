@@ -53,11 +53,14 @@ var baseUrl;
                     var tile = $(event.relatedTarget)
                     var beer = tile.data('beer') // Extract info from data-* attributes
                     var modal = $(this);
-                    console.log(beer);
                     $('#beverageDetailLabelName').text(beer.name);
                     $('#beverageAvailableAmount').text(beer.count + " left in stock.");
                     $('#beverageDetailLabelPrice').text("KR " + beer.price);
                 });
             })
+
+            $scope.countFilter = function(drink) {
+                return drink.count > 0;
+            }
         }]);
 })(window.angular);
