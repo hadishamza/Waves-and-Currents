@@ -58,12 +58,16 @@
                 <label>Password</label>
                 <input type="password" id="password_Field" name="password" class="form-control" placeholder="Password">
                 <span class="help-block"></span>
-                <div class="login-buttons">
+                <div class="row">
                     <!-- BUTTONS -->
-                    <div id="test1" class="btn btn-primary" onclick="window.location = '../customer/main.html';"><span class="glyphicon glyphicon-share-alt"></span>
+                    <div class="col-xs-5 col-xs-offset-1">
+                    <div id="test1" class="btn btn-default login-button" onclick="window.location = '../customer/main.html';"><span class="glyphicon glyphicon-share-alt"></span>
                         Continue without login
                     </div>
-                    <div class="btn btn-primary" onclick="logInAndRegisterCurrentUser($('#username_Field').val(), $('#password_Field').val())"><span class="glyphicon glyphicon-play"></span> Login
+                    </div>
+                    <div class="col-xs-5">
+                    <div class="btn btn-success login-button" onclick="logInAndRegisterCurrentUser($('#username_Field').val(), $('#password_Field').val())"><span class="glyphicon glyphicon-play"></span> Login
+                    </div>
                     </div>
                 </div>
             </div>
