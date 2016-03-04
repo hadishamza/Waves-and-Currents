@@ -37,7 +37,7 @@ var baseUrl;
             this.name = "CustomerHomeViewController";
             this.params = $routeParams;
         }])
-        .controller('CustomerMenuViewController', ['$routeParams', function($routeParams) {
+        .controller('CustomerMenuViewController', ['$routeParams', '$scope', '$timeout', function($routeParams, $scope, $timeout) {
             this.name = "CustomerMenuViewController";
             this.params = $routeParams;
 
@@ -47,5 +47,17 @@ var baseUrl;
 
             this.currentBeverageList = this.beerList;
             this.baseUrl = baseUrl;
+
+            $('#beverageDetailModal').on('show.bs.modal', function (event) {
+                $timeout(function(){
+                    var tile = $(event.relatedTarget)
+                    var beer = tile.data('beer') // Extract info from data-* attributes
+                    var modal = $(this);
+                    console.log(beer);
+                    $('#beverageDetailLabelName').text(beer.name);
+                    $('#beverageAvailableAmount').text(beer.count + " left in stock.");
+                    $('#beverageDetailLabelPrice').text("KR " + beer.price);
+                });
+            })
         }]);
 })(window.angular);
