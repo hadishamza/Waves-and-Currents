@@ -21,11 +21,11 @@
 
                             <div id="centralContent">
                                 <div class="row scrollableBlock">
-                                    <div id="$index" class="col-md-2 tileContainer" ng-repeat="x in menu.currentBeverageList | filter : search | filter : countFilter">
+                                    <div id="$index" class="col-md-2 tileContainer" ng-repeat="x in inventory.currentBeverageList | filter : search | filter : countFilter">
                                         <div class="tile" data-toggle="modal" data-target="#beverageDetailModal" data-beer="{{ x }}">
                                             <div class="row">
                                                 <div class="col-md-12 square">
-                                                    <img class="squareContent" src="{{ menu.baseUrl + '/views/assets/images/beverage-icons/beer-' + ($index % 29 + 1)  + '.svg' }}">
+                                                    <img class="squareContent" src="{{ inventory.baseUrl + '/views/assets/images/beverage-icons/beer-' + ($index % 29 + 1)  + '.svg' }}">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -107,8 +107,10 @@
             <div class="modal-footer">
                 KR <input class="modal-title" id="beverageDetailLabelPrice"></input>
                 <br><br>
-                <button type="button" class="btn btn-default" data-dismiss="modal"><script>writeLocalizedString("cancel")</script></button>
-                <button type="button" class="btn btn-primary"><script>writeLocalizedString("save")</script></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Remove from Inventory</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Save</button>
+
             </div>
         </div>
     </div>

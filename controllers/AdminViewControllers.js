@@ -22,7 +22,12 @@ var baseUrl;
                     .when('/inventory', {
                         templateUrl: baseUrl + 'views/admin/inventory.html',
                         controller: 'AdminInventoryViewController',
-                        controllerAs: 'menu'
+                        controllerAs: 'inventory'
+                    })
+                    .when('/profile', {
+                        templateUrl: baseUrl + 'views/admin/profile.html',
+                        controller: 'AdminProfileViewController',
+                        controllerAs: 'profile'
                     });
 
                 $locationProvider.html5Mode(true);
@@ -37,11 +42,11 @@ var baseUrl;
                 this.$routeParams = $routeParams;
             }])
         .controller('AdminHomeViewController', ['$routeParams', function($routeParams) {
-            this.name = "CustomerHomeViewController";
+            this.name = "AdminHomeViewController";
             this.params = $routeParams;
         }])
         .controller('AdminInventoryViewController', ['$routeParams', '$scope', '$timeout', function($routeParams, $scope, $timeout) {
-            this.name = "CustomerMenuViewController";
+            this.name = "AdminInventoryViewController";
             this.params = $routeParams;
 
             this.beerList = beers.map(function(a){return new Drink(a)});
@@ -80,5 +85,12 @@ var baseUrl;
             $scope.countFilter = function(drink) {
                 return drink.count > 0;
             }
-        }]);
+        }])
+        .controller('AdminProfileViewController', ['$routeParams', function($routeParams) {
+            this.name = "AdminProfileViewController";
+            this.params = $routeParams;
+
+            this.users = users;
+        }])
+
 })(window.angular);
