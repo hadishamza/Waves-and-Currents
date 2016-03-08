@@ -8,7 +8,7 @@
                         <div class="col-md-2" style="height: 100%">
                             <ul class="nav nav-pills nav-stacked navbar-inverse" style="height: 100%;">
                                 <li role="presentation"><a href="#">Beer</a></li>
-                                <li role="presentation"><a href="#"">Spirit</a></li>
+                                <li role="presentation"><a href="#">Spirit</a></li>
                                 <li role="presentation"><a href="#">Wine</a></li>
                             </ul>
                         </div>
@@ -16,7 +16,7 @@
                             <div id="centralContent">
                                 <div class="row scrollableBlock">
                                     <div id="$index" class="col-md-3 tileContainer" ng-repeat="x in menu.currentBeverageList | filter : search | filter : countFilter">
-                                        <div class="tile" data-toggle="modal" data-target="#beverageDetailModal" data-beer="{{ x }}">
+                                        <div class="tile" id="{{ x.id }}" ondragstart="drag(event)" draggable="true" data-toggle="modal" data-target="#beverageDetailModal" data-beer="{{ x }}">
                                             <div class="row">
                                                 <div class="col-md-12 square">
                                                     <img class="squareContent" src="{{ menu.baseUrl + '/views/assets/images/beverage-icons/beer-' + ($index % 29 + 1)  + '.svg' }}">
@@ -57,7 +57,9 @@
                                         <a href="#" ><i class="fa fa-rotate-right"></i></a>
                                     </span>
                                 </div>
-                                <div id="tray" style="height: 82.8%"></div>
+                                <div id="tray" style="height: 82.8%">
+                                    <ul class="list-group" ondragover="allowDrop(event)" ondrop="drop(event)"></u>
+                                </div>
                                 <div id="trayControl">
                                     <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
                                     <button style="float: right;" type="button" class="btn btn-success">Proceed</button>

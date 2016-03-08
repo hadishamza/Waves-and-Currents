@@ -7,20 +7,18 @@
     <link rel="stylesheet" href="../../libraries/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../libraries/bootstrap/css/bootstrap.min.css">
 
+    <script src="../../libraries/angular-js/angular.js"></script>
+    <script src="../../libraries/angular-js/angular-route.js"></script>
+    <script src="../../controllers/CustomerViewContollers.js"></script>
+
     <script src="../../libraries/jquery-2.2.0.min.js"></script>
-    <script src="../../controllers/HomeViewController.js"></script>
+    <script src="../../services/LocalizationManager.js"></script>
     <script src="../../services/BackendManager.js"></script>
     <script src="../../models/Person.js"></script>
-
-    <script src="../../services/LocalizationManager.js"></script>
-
-    <script src="../../controllers/HomeViewController.js"></script>
-    <script src="../../libraries/jquery-2.2.0.min.js"></script>
-    <script src="../../services/LocalizationManager.js"></script>
-    <script src="../../services/BackendManager.js"></script>
     <script src="../../models/Customer.js"></script>
-    <script src="../../models/Administrator.js"></script>
     <script src="../../models/Drink.js"></script>
+    <script src="../../models/Administrator.js"></script>
+
 </head>
 <body>
 <div id="header">
@@ -28,6 +26,28 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Flying Dutchman</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><script>writeLocalizedString("themes")</script><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a><script>writeLocalizedString("theme1")</script></a></li>
+                        <li><a><script>writeLocalizedString("theme2")</script></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><script>writeLocalizedString("languages")</script><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:setLocaleAux('english');"><img class="flagIcon"
+                                                                               src="../assets/images/eng-icon.png"/>
+                            <script>writeLocalizedString("english")</script></a></li>
+                        <li><a href="javascript:setLocaleAux('swedish');"><img class="flagIcon"
+                                                                               src="../assets/images/swe-icon.png"/>
+                            <script>writeLocalizedString("swedish")</script></a></li>
+                    </ul>
+                </li>
+            </ul>
             </div>
         </div>
     </nav>
@@ -38,7 +58,7 @@
 
         <!-- PAGE TITLE -->
         <div id="login-header" class="login-header-box">
-            <h1>Welcome, please login!</h1>
+            <h1><script>writeLocalizedString("welcome")</script></h1>
         </div>
 
         <!-- SHOW ERROR/SUCCESS MESSAGES -->
@@ -48,26 +68,30 @@
         <form class="login-input-box">
             <!-- NAME -->
             <div id="name-group" class="form-group">
-                <label>Username</label>
+                <label><script>writeLocalizedString("username")</script></label>
                 <input type="text" id="username_Field" name="username" class="form-control" placeholder="Username">
                 <span class="help-block"></span>
             </div>
 
             <!-- Password -->
             <div id="password-group" class="form-group">
-                <label>Password</label>
+                <label><script>writeLocalizedString("password")</script></label>
                 <input type="password" id="password_Field" name="password" class="form-control" placeholder="Password">
                 <span class="help-block"></span>
                 <div class="row">
                     <!-- BUTTONS -->
                     <div class="col-xs-5 col-xs-offset-1">
-                    <div id="test1" class="btn btn-default login-button" onclick="window.location = '../customer/main.html';"><span class="glyphicon glyphicon-share-alt"></span>
-                        Continue without login
-                    </div>
+                        <div id="test1" class="btn btn-default login-button"
+                             onclick="window.location = '../customer/main.html';"><span
+                                class="glyphicon glyphicon-share-alt"></span>
+                            <script>writeLocalizedString("continueButton")</script>
+                        </div>
                     </div>
                     <div class="col-xs-5">
-                    <div class="btn btn-success login-button" onclick="logInAndRegisterCurrentUser($('#username_Field').val(), $('#password_Field').val())"><span class="glyphicon glyphicon-play"></span> Login
-                    </div>
+                        <div class="btn btn-success login-button"
+                             onclick="logInAndRegisterCurrentUser($('#username_Field').val(), $('#password_Field').val())">
+                            <span class="glyphicon glyphicon-play"></span><script>writeLocalizedString("logInButton")</script>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,3 +100,5 @@
 </div>
 </body>
 </html>
+<script src="../../controllers/HomeViewController.js"></script>
+<script src="../../libraries/bootstrap/js/bootstrap.min.js"></script>

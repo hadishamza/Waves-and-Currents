@@ -270,3 +270,9 @@ body{
     width: 50%;
     margin-left: 17.5%;
 }
+.list-group{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    height: 100%;
+}

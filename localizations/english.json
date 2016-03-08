@@ -3,5 +3,12 @@
 	"username": "Username",
 	"password": "Password",
 	"logInButton": "Login",
-    "continueButton": "Continue without login"
+    "continueButton": "Continue without login",
+	"languages": "Languages",
+	"themes": "Themes",
+	"theme1": "Theme 1",
+	"theme2": "Theme 2",
+	"swedish": "Swedish",
+	"english": "English"
+
 }
