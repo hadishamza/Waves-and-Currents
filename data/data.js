@@ -1469,3 +1469,75 @@ var beerDetails = {
         "koscher": "0"
     }
 }
+
+var users = [
+    {
+        firstName: "Ervin",
+        lastName: "Todd",
+        userName: "ervtod",
+        password: "ervtod",
+        role: "admin"
+    },
+    {
+        firstName: "Hiram",
+        lastName: "Christopherson",
+        userName: "hirchr",
+        password: "hirchr",
+        role: "admin"
+    },
+    {
+        firstName: "Jory",
+        lastName: "Assies",
+        userName: "jorass",
+        password: "jorass",
+        role: "admin"
+    },
+    {
+        firstName: "Aamu",
+        lastName: "Stankic",
+        userName: "aamsta",
+        password: "aamsta",
+        role: "user"
+    },
+    {
+        firstName: "Andrea",
+        lastName: "Darzi",
+        userName: "anddar",
+        password: "anddar",
+        role: "user"
+    },
+    {
+        firstName: "Aquilina",
+        lastName: "Lyndon",
+        userName: "aqulyn",
+        password: "aqulyn",
+        role: "user"
+    },
+    {
+        firstName: "Aubrey",
+        lastName: "Blackwood",
+        userName: "aubbla",
+        password: "aubbla",
+        role: "user"
+    },
+    {
+        firstName: "Bento",
+        lastName: "Faucher",
+        userName: "benfau",
+        password: "benfau",
+        role: "user"
+    },{
+        firstName: "Branko",
+        lastName: "Tamás",
+        userName: "bratam",
+        password: "bratam",
+        role: "user"
+    },
+    {
+        firstName: "Cezar",
+        lastName: "Newman",
+        userName: "ceznew",
+        password: "ceznew",
+        role: "user"
+    }
+]

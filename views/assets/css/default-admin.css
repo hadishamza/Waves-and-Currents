@@ -262,3 +262,51 @@ body{
     width: 50%;
     margin-left: 17.5%;
 }
+
+
+#profilePage .nav {
+    border-radius: 5px;
+    border: black solid 1px;
+}
+
+#profilePage .nav li a {
+    color: #9d9d9d;
+    border-radius: 0px;
+}
+
+#profilePage .nav li a:hover {
+    color: white;
+    background-color:transparent;
+}
+
+#profilePage .nav li a:focus {
+    color:white;
+    background-color:black;
+}
+
+#profilePage .textField {
+    background: #222;
+    border-radius: 5px;
+    border: #111 solid 1px;
+    width: 100%;
+    height: 40px;
+    padding:10px;
+    color: #fff;
+
+    margin-bottom: 15px;
+}
+
+#profilePage .textField:focus {
+    outline-width: 0;
+    border-color: white;
+}
+
+#profilePage .textFeildButton {
+    height: 40px;
+    width: 100%;
+    line-height: 26px;
+}
+
+#profilePage .userTableRow {
+    line-height: 40px;
+}

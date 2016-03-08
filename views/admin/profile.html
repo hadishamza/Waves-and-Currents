@@ -1,0 +1,49 @@
+<div ng-controller="AdminProfileViewController" id="profilePage" style="height: 100%">
+    <div class="row" style="height: 100%">
+        <div class="col-md-12" style="height: 100%">
+            <div class="row" style="height: 100%">
+                <div class="col-md-12" style="height: 100%">
+                    <div class="row" style="height: 100%">
+                        <div class="col-md-2" style="height: 100%">
+                            <ul class="nav nav-pills nav-stacked navbar-inverse" style="height: 100%;">
+                                <li role="presentation"><a href="#">All</a></li>
+                                <li role="presentation"><a href="#">Admin</a></li>
+                                <li role="presentation"><a href="#"">User</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-10" style="height: 100%; padding-left:0px">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input ng-model="search" class="textField" type="text" class="form-control" placeholder="Search for...">
+                                </div>
+                                <div class="col-md-2" style="padding-left: 0">
+                                    <div class="btn btn-danger textFeildButton">Remove Selected</div>
+                                </div>
+                                <div class="col-md-2" style="padding-left: 0">
+                                    <div class="btn btn-primary textFeildButton">Add New</div>
+                                </div>
+                            </div>
+
+                            <div id="centralContent">
+                                <table style="width:100%">
+                                    <tr class="userTableRow" >
+                                        <td><input type="checkbox"></td>
+                                        <td>Name</td>
+                                        <td>User Name</td>
+                                        <td>Privilege</td>
+                                    </tr>
+                                    <tr class="userTableRow" ng-repeat="user in profile.users">
+                                        <td><input type="checkbox"></td>
+                                        <td id="name">{{ user.firstName + " " + user.lastName }}</td>
+                                        <td id="userName">{{ user.userName }}</td>
+                                        <td id="role">{{ user.role}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
