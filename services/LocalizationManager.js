@@ -37,7 +37,7 @@ function setLocaleAux(locale){
 // to indicate whether the operation is succeeded
 function setLocale(locale, completion) {
     $.ajax({
-        url: "../../localizations/" + locale +".json",
+        url: "/Waves-and-Currents/localizations/" + locale +".json",
         dataType: 'json',
         cache: false,
         async: false,
