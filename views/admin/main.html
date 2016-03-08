@@ -19,26 +19,28 @@
     <script src="../../models/Customer.js"></script>
     <script src="../../models/Drink.js"></script>
     <script src="../../models/Administrator.js"></script>
+</head>
 
 <body ng-app="mainAppAdmin"  ng-controller="AdminMainViewController as main">
 <div id="header">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Flying Ductchman</a>
+                <a class="navbar-brand" href="#">Flying Dutchman</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/home">Home <span class="sr-only">(current)</span></a>
+                        <a href="/home"><script>writeLocalizedString("home")</script><span class="sr-only">(current)</span></a>
                     </li>
                     <li>
-                        <a href="/inventory">Inventory <span class="sr-only">(current)</span></a>
+                        <a href="/inventory"><script>writeLocalizedString("inventory")</script><span class="sr-only">(current)</span></a>
                     </li>
-                    <li><a href="/profile">Profile</a></li>
-                    <li><a href="#">Messages</a></li>
+                    <li><a href="#"><script>writeLocalizedString("profile")</script></a></li>
+                    <li><a href="#"><script>writeLocalizedString("messages")</script></a></li>
+
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><script>writeLocalizedString("tools")</script> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a>Tool 1</a></li>
                             <li><a>Tool 2</a></li>
@@ -50,20 +52,20 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Themes<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><script>writeLocalizedString("themes")</script><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a>Theme 1</a></li>
-                            <li><a>Theme 2</a></li>
+                            <li><a><script>writeLocalizedString("theme1")</script></a></li>
+                            <li><a><script>writeLocalizedString("theme2")</script></a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><script>writeLocalizedString("languages")</script><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="javascript:setLocaleAux('english');"><img class="flagIcon" src="../assets/images/eng-icon.png"/>  English</a></li>
-                            <li><a href="javascript:setLocaleAux('swedish');"><img class="flagIcon" src="../assets/images/swe-icon.png"/>  Swedish</a></li>
+                            <li><a href="javascript:setLocaleAux('english');"><img class="flagIcon" src="../assets/images/eng-icon.png"/><script>writeLocalizedString("english")</script></a></li>
+                            <li><a href="javascript:setLocaleAux('swedish');"><img class="flagIcon" src="../assets/images/swe-icon.png"/><script>writeLocalizedString("swedish")</script></a></li>
                         </ul>
                     </li>
-                    <li><a onclick= "window.location = '../common/login.html';">Log Out</a></li>
+                    <li><a onclick= "window.location = '../common/login.html';"><script>writeLocalizedString("logout")</script></a></li>
                 </ul>
             </div>
         </div>
