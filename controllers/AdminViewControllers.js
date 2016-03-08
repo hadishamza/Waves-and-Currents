@@ -56,41 +56,25 @@ var baseUrl;
             this.currentBeverageList = this.beerList;
             this.baseUrl = baseUrl;
 
-            $('#beverageDetailModal').on('show.bs.modal', function (event) {
-                $timeout(function(){
-                    var tile = $(event.relatedTarget)
-                    var beer = tile.data('beer') // Extract info from data-* attributes
-
-                    currentUser = new Customer("First", "Last", "001", "enkov", "enkov")
-                    currentUser.getDrinkData(beer, function(success, payload){
-                        $("#beverageAlcoholLevel").val(payload["alkoholhalt"]);
-                        $("#beverageYear").val(payload["argang"]);
-                        $("#beveragePackaging").val(payload["forpackning"]);
-                        $("#beverageDistributor").val(payload["leverantor"]);
-                        $("#beverageProducer").val(payload["producent"]);
-                        $("#beverageSampling").val(payload["saljstart"]);
-                        $("#beverageSelection").val(payload["sortiment"]);
-                        $("#beverageOriginCountry").val(payload["ursprunglandnamn"]);
-                        $("#beverageGroup").val(payload["varugrupp"]);
-                        $("#beverageVolume").val(payload["volymiml"]);
-                    })
-
-                    var modal = $(this);
-                    $('#beverageDetailLabelName').val(beer.name);
-                    $('#beverageAvailableAmount').val(beer.count);
-                    $('#beverageDetailLabelPrice').val(beer.price);
-                });
-            })
-
             $scope.countFilter = function(drink) {
                 return drink.count > 0;
             }
         }])
-        .controller('AdminProfileViewController', ['$routeParams', function($routeParams) {
+        .controller('AdminProfileViewController', ['$routeParams', '$scope', '$timeout', function($routeParams, $scope, $timeout) {
             this.name = "AdminProfileViewController";
             this.params = $routeParams;
 
             this.users = users;
+
+            $('#userModal').on('show.bs.modal', function (event) {
+                $timeout(function(){
+                    var row = $(event.relatedTarget)
+                    var user = row.data('user')
+
+                    $('#userModalTitle').text(user.firstName + " " + user.lastName);
+                    $('#userModalUserName').text(user.userName);
+                });
+            })
         }])
 
 })(window.angular);
