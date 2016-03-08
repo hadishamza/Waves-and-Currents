@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Flying Dutchman</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/default.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/default-admin.css">
     <link rel="stylesheet" href="../../libraries/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../libraries/bootstrap/css/bootstrap.min.css">
 
     <script src="../../data/data.js"></script>
     <script src="../../libraries/angular-js/angular.js"></script>
     <script src="../../libraries/angular-js/angular-route.js"></script>
-    <script src="../../controllers/CustomerViewContollers.js"></script>
+    <script src="../../controllers/AdminViewControllers.js"></script>
 
     <script src="../../libraries/jquery-2.2.0.min.js"></script>
     <script src="../../services/LocalizationManager.js"></script>
@@ -20,7 +20,7 @@
     <script src="../../models/Drink.js"></script>
     <script src="../../models/Administrator.js"></script>
 
-<body ng-app="mainApp"  ng-controller="MainViewController as main">
+<body ng-app="mainAppAdmin"  ng-controller="AdminMainViewController as main">
 <div id="header">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -33,7 +33,7 @@
                         <a href="/home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li>
-                        <a href="/menu">Menu <span class="sr-only">(current)</span></a>
+                        <a href="/inventory">Inventory <span class="sr-only">(current)</span></a>
                     </li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Messages</a></li>
