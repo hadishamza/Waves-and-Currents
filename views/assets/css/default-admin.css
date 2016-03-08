@@ -264,6 +264,16 @@ body{
 }
 
 
+#profilePage .content {
+    border-radius: 4px 4px 4px 4px;
+    background: #222;
+    border: black solid 1px;
+    height: calc(100% - 55px);
+    color: white;
+    padding:0px;
+    overflow: scroll;
+}
+
 #profilePage .nav {
     border-radius: 5px;
     border: black solid 1px;
@@ -309,4 +319,52 @@ body{
 
 #profilePage .userTableRow {
     line-height: 40px;
+}
+
+.fixed_headers {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.fixed_headers th {
+    text-decoration: underline;
+}
+.fixed_headers th,
+.fixed_headers td {
+    padding: 5px;
+    text-align: center;
+}
+.fixed_headers td:nth-child(1),
+.fixed_headers th:nth-child(1) {
+    min-width: 50px;
+}
+.fixed_headers td:nth-child(2),
+.fixed_headers th:nth-child(2) {
+    min-width: 400px;
+    text-align: left;
+}
+.fixed_headers td:nth-child(3),
+.fixed_headers th:nth-child(3) {
+    width: 350px;
+}
+
+.fixed_headers td:nth-child(4),
+.fixed_headers th:nth-child(4) {
+    width: 100px;
+}
+
+.fixed_headers thead {
+    background-color: #333;
+    color: #FDFDFD;
+    line-height: 40px;
+}
+.fixed_headers thead tr {
+    display: block;
+    position: relative;
+}
+.fixed_headers tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 493px;
 }

@@ -1493,6 +1493,20 @@ var users = [
         role: "admin"
     },
     {
+        firstName: "Saša",
+        lastName: "Krüger",
+        userName: "saskru",
+        password: "saskru",
+        role: "admin"
+    },
+    {
+        firstName: "Svetlana",
+        lastName: "Torres",
+        userName: "svetor",
+        password: "svetor",
+        role: "admin"
+    },
+    {
         firstName: "Aamu",
         lastName: "Stankic",
         userName: "aamsta",

@@ -24,20 +24,24 @@
                                 </div>
                             </div>
 
-                            <div id="centralContent">
-                                <table style="width:100%">
-                                    <tr class="userTableRow" >
-                                        <td><input type="checkbox"></td>
-                                        <td>Name</td>
-                                        <td>User Name</td>
-                                        <td>Privilege</td>
-                                    </tr>
-                                    <tr class="userTableRow" ng-repeat="user in profile.users">
-                                        <td><input type="checkbox"></td>
-                                        <td id="name">{{ user.firstName + " " + user.lastName }}</td>
-                                        <td id="userName">{{ user.userName }}</td>
-                                        <td id="role">{{ user.role}}</td>
-                                    </tr>
+                            <div class="content">
+                                <table class="fixed_headers">
+                                    <thead>
+                                        <tr>
+                                            <td><input type="checkbox"></td>
+                                            <td><strong>Name</strong></td>
+                                            <td><strong>User Name</strong></td>
+                                            <td><strong>Privilege</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="userTableRow" ng-repeat="user in profile.users">
+                                            <td><input type="checkbox"></td>
+                                            <td id="name">{{ user.firstName + " " + user.lastName }}</td>
+                                            <td id="userName">{{ user.userName }}</td>
+                                            <td id="role">{{ user.role}}</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
