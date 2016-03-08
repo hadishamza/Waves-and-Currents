@@ -334,6 +334,13 @@ body{
     padding: 5px;
     text-align: center;
 }
+
+.fixed_headers tbody tr:hover {
+    font-weight: 600;
+    color: lightseagreen;
+    cursor: pointer;
+}
+
 .fixed_headers td:nth-child(1),
 .fixed_headers th:nth-child(1) {
     min-width: 50px;
