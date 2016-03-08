@@ -3,5 +3,11 @@
 	"username": "Användarnamn",
 	"password": "Lösenord",
 	"logInButton": "Logga in",
-    "continueButton": "Fortsätt utan log in"
+    "continueButton": "Fortsätt utan log in",
+	"languages": "Språk",
+	"themes": "Teman",
+	"theme1": "Tema 1",
+	"theme2": "Tema 2",
+	"swedish": "Svenska",
+	"english": "Engelska"
 }
