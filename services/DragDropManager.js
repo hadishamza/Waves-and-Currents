@@ -17,10 +17,6 @@ function drop(ev){
 	if(data){
 		var beerData = $("#"+data).data("beer"); // gather beer data through data-tag
 
-		var appElement = document.querySelector('[ng-app=mainApp]');
-		var $scope = angular.element(appElement).scope();
-
-
 		var currentState =  stateStack.pop();
 		stateStack.push(cloneObject(currentState));
 		if (currentState == undefined) {
@@ -43,7 +39,6 @@ function drop(ev){
 		stateStack.push(currentState);
 		stateStackRedo = [];
 	}
-
 }
 
 function cloneObject(obj) {
@@ -75,4 +70,21 @@ function redo() {
 
 function clearTray() {
 	stateStack.push([]);
+}
+
+function removeDrinkFromTray(id) {
+	console.log(id);
+	if(id){
+		var currentState =  stateStack.pop();
+		stateStack.push(cloneObject(currentState));
+
+		currentState = currentState.filter(function(entry){
+			return entry.drink.id !== id;
+		});
+
+		console.log(currentState);
+
+		stateStack.push(currentState);
+		stateStackRedo = [];
+	}
 }

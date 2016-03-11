@@ -58,7 +58,6 @@
                                     </span>
                                 </div>
                                 <div id="tray" style="height: 82.8%">
-                                    <!--<div>{{ stateStack }}</div>-->
                                     <ul class="list-group" ondragover="allowDrop(event)" ondrop="drop(event)" style="padding:10px;">
                                         <li class='list-group-item' ng-repeat="entry in stateStack">
                                             <div class="container-fluid">
@@ -67,7 +66,7 @@
                                                         <strong>{{ entry.drink.name }}</strong>
                                                     </div>
                                                     <div class="col-md-3" style="padding: 0px">
-                                                        <a href="#" class="blackText pull-right" style="margin-top: -5px;"><i class="fa fa-times"></i></a>
+                                                        <a ng-click="removeDrinkFromTray(entry.drink.id);" class="blackText pull-right" style="margin-top: -5px;"><i class="fa fa-times"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="row">

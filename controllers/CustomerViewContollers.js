@@ -85,5 +85,9 @@ var baseUrl;
                 $scope.$apply();
             }, 50);
 
+            $scope.removeDrinkFromTray = function(id) {
+                removeDrinkFromTray(id);
+            }
+
         }]);
 })(window.angular);
