@@ -1,6 +1,7 @@
 //remember <script src="../../services/DragDropManager.js"></script>
 // fix selectors
 var stateStack = [];
+var stateStackRedo = [];
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -55,4 +56,18 @@ function cloneObject(obj) {
 	}
 
 	return temp;
+}
+
+function undo() {
+	if (stateStack.length > 0) {
+		var state = stateStack.pop();
+		stateStackRedo.push(state);
+	}
+}
+
+function redo() {
+	if (stateStackRedo.length > 0) {
+		var state = stateStackRedo.pop();
+		stateStack.push(state);
+	}
 }
