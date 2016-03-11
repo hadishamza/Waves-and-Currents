@@ -53,16 +53,32 @@
                                 <div id="menuHeader">
                                     <strong>Your Order</strong>
                                     <span>
-                                        <a href="javascript: undo();" ><i class="fa fa-rotate-left"></i></a>&nbsp
-                                        <a href="javascript: redo();" ><i class="fa fa-rotate-right"></i></a>
+                                        <a class="whiteText" href="javascript: undo();" ><i class="fa fa-rotate-left"></i></a>&nbsp
+                                        <a class="whiteText" href="javascript: redo();" ><i class="fa fa-rotate-right"></i></a>
                                     </span>
                                 </div>
                                 <div id="tray" style="height: 82.8%">
                                     <!--<div>{{ stateStack }}</div>-->
-                                    <ul class="list-group" ondragover="allowDrop(event)" ondrop="drop(event)">
+                                    <ul class="list-group" ondragover="allowDrop(event)" ondrop="drop(event)" style="padding:10px;">
                                         <li class='list-group-item' ng-repeat="entry in stateStack">
-                                            <div>{{ entry.drink.name }}</div>
-                                            Amount: <input type='number' min='1' value='{{ entry.amount }}' style='width:50px'>
+                                            <div class="container-fluid">
+                                                <div class="row" style="padding: 5px 0px 10px 0px">
+                                                    <div class="col-md-9" style="padding: 0px">
+                                                        <strong>{{ entry.drink.name }}</strong>
+                                                    </div>
+                                                    <div class="col-md-3" style="padding: 0px">
+                                                        <a href="#" class="blackText pull-right" style="margin-top: -5px;"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12" style="padding: 0px">
+                                                        <div class="pull-right">
+                                                            <span style="position:relative ;top: 1px; display: inline-block">KR {{ entry.drink.price }}</span> ×
+                                                            <input type='number' min='1' value='{{ entry.amount }}' style='width:50px;'>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>

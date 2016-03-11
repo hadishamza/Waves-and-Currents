@@ -271,8 +271,18 @@ body{
     margin-left: 17.5%;
 }
 .list-group{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0px;
+    padding: 10px;
     color: black;
-    height: 100%;
+    height: 447px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.whiteText {
+    color: white;
+}
+
+.blackText {
+    color: black;
 }
