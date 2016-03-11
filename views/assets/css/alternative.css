@@ -1,0 +1,275 @@
+body{
+    background-color: gray;
+}
+
+#login-box {
+    padding-top: 5%;
+    position: static;
+}
+
+
+.login-button {
+    width: 100%;
+}
+
+.login-header-box {
+    horiz-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-radius: 5px 5px 0px 0px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.login-input-box {
+    horiz-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+    border-radius: 0px 0px 5px 5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.form-group {
+        color: white;
+}
+
+#header{
+	color: white;
+	padding: 15px;
+	margin-top: 5px;
+}
+#header > nav{
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+#login-header {
+	color: white;
+	padding: 15px;
+	margin-top: 5px;
+	text-align: center;
+}
+.flagIcon {
+	margin-right: 10px;
+}
+
+#content {
+	margin: 0px 15px 15px 15px;
+	border-radius: 4px;
+	height: 600px;
+	/*background-color: rgba(255,255,255, 0.8);*/
+}
+
+#section {
+    width:100%;
+    text-align:center;
+    padding:10px;
+	height: 600px;
+}
+
+#welcomePage {
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	height: 100%;
+}
+
+#welcomeText{
+	text-align: center;
+	font-size: small;
+}
+
+#menu{
+	text-align: center;
+}
+
+#additionalInfoText {
+	text-align: center;
+	font-size: smaller;
+}
+#adminInfo{
+	color: red;
+}
+
+#menuPage .nav {
+    border-radius: 5px;
+    border: black solid 1px;
+}
+
+#menuPage .nav li a {
+    color: #9d9d9d;
+    border-radius: 0px;
+}
+
+#menuPage .nav li a:hover {
+    color: white;
+    background-color:transparent;
+}
+
+#menuPage .nav li a:focus {
+    color:white;
+    background-color:black;
+}
+
+#menuPage .textField {
+    background: #222;
+    border-radius: 5px;
+    border: #111 solid 1px;
+    width: 100%;
+    height: 40px;
+    padding:10px;
+    color: #fff;
+
+    margin-bottom: 15px;
+}
+
+#menuPage .textField:focus {
+    outline-width: 0;
+    border-color: white;
+}
+
+#menuHeader {
+	padding:10px;
+}
+
+#menuHeader span {
+    float: right;
+}
+
+#centralContent{
+	border-radius: 4px 4px 4px 4px;
+	background: #222;
+    border: black solid 1px;
+	height: 100%;
+    color: white;
+    padding:0px 15px 0px 30px;
+	overflow: scroll;
+}
+
+#centralContent .tileContainer {
+	padding-left: 0px;
+}
+
+#centralContent .tileContainer:nth-child(1),
+#centralContent .tileContainer:nth-child(2),
+#centralContent .tileContainer:nth-child(3),
+#centralContent .tileContainer:nth-child(4) {
+	margin-top: 15px;
+}
+
+#centralContent .tile {
+	border: black 1px solid;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+#centralContent .tile img {
+    display: block;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#centralContent .tile .textContent {
+    background: rgba(255, 255, 255, 0.1);
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 0px;
+    width: calc(100% - 30px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+    overflow: scroll;
+    white-space: nowrap;
+}
+
+#centralContent .tile .textContent div {
+    overflow: scroll;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#centralContent .tile .priceContent {
+    background: rgba(255, 255, 255, 0.2);
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 0px 0px 5px 5px;
+    width: calc(100% - 30px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#centralContent .tile:hover {
+	border-color: white;
+    cursor: pointer;
+}
+
+.tableCellTitle {
+    padding-right: 20px;
+    /*text-align: right;*/
+    width: 30%;
+}
+
+
+
+#specials{
+	margin-left: 8%;
+	margin-right: 8%;
+	padding: 1%;
+	border: black solid 1px;
+	border-radius: 15px;
+}
+
+#rightMenu{
+    background: #222;
+    border: black solid 1px;
+    color: white;
+	height: 100%;
+	border-radius: 3px;
+}
+
+#tray{
+	border-top: black solid 0.5px;
+	border-bottom: black solid 0.5px;
+	height: 400px;
+}
+#trayControl{
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+
+.square {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.squareContent {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    margin-left: 17.5%;
+}
+.list-group{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    height: 100%;
+}

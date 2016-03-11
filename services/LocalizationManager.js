@@ -9,24 +9,25 @@ var defaultLocale = "english";
 if(sessionStorage.getItem('localeData') === null){
     setLocale(defaultLocale, function(success){
         if (success) {
-            console.log("Default locale registration succeeded");
+            console.log("Default local registration succeeded");
         } else {
-            console.log("Default locale registration failed");
+            console.log("Default local registration failed");
         }
     });    
 } else {
     currentLocaleJSON = JSON.parse(sessionStorage.getItem('localeData'));
-}
+alert("");}
 
 // Help function for when setting the locale (e.g. button press)
 function setLocaleAux(locale){
     setLocale(locale, function(success, data){
         if (success){
+            alert("Setting local Aux function");
             sessionStorage.setItem('localeData', JSON.stringify(data));
             location.reload();
         }
         else{
-            console.log("Setting locale failed");
+            console.log("Setting local failed");
         }
     })
 }
