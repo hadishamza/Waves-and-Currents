@@ -35,7 +35,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="userTableRow" ng-repeat="user in profile.users">
+                                        <tr class="userTableRow" ng-repeat="user in profile.users" data-toggle="modal" data-target="#userModal" data-user="{{ user }}">
                                             <td><input type="checkbox"></td>
                                             <td id="name">{{ user.firstName + " " + user.lastName }}</td>
                                             <td id="userName">{{ user.userName }}</td>
@@ -47,6 +47,49 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4>Password Update</h4>
+            </div>
+            <div class="modal-body">
+
+                <h5 class="modal-title" style="padding-top: 10px;"><span id="userModalTitle"></span> (<span id="userModalUserName"></span>)</h5>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6>Old Password</h6>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>New Password</h6>
+                    </div>
+                    <div class="col-md-4">
+                        <h6>Confirm New Password</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="password" name="existingPassword" placeholder="Old Password">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="password" name="newPassword" placeholder="New Password">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="password" name="confirmPassword" placeholder="Confirm New Password">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Save</button>
             </div>
         </div>
     </div>
