@@ -77,5 +77,13 @@ var baseUrl;
             $scope.countFilter = function(drink) {
                 return drink.count > 0;
             }
+
+            $scope.stateStack = [];
+
+            setInterval(function() {
+                $scope.stateStack = stateStack[stateStack.length - 1];
+                $scope.$apply();
+            }, 50);
+
         }]);
 })(window.angular);

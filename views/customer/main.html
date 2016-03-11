@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Flying Dutchman</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/default.css">
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="../assets/css/default.css">
     <link rel="stylesheet" href="../../libraries/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../libraries/bootstrap/css/bootstrap.min.css">
 
@@ -16,6 +16,7 @@
     <script src="../../services/LocalizationManager.js"></script>
     <script src="../../services/BackendManager.js"></script>
     <script src="../../services/DragDropManager.js"></script>
+    <script src="../../services/StyleManager.js"></script>
     <script src="../../models/Person.js"></script>
     <script src="../../models/Customer.js"></script>
     <script src="../../models/Drink.js"></script>
@@ -48,8 +49,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><script>writeLocalizedString("themes")</script><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a><script>writeLocalizedString("theme1")</script></a></li>
-                                <li><a><script>writeLocalizedString("theme2")</script></a></li>
+                                <li><a id="defaultStyle"><script>writeLocalizedString("theme1")</script></a></li>
+                                <li><a id="altStyle"><script>writeLocalizedString("theme2")</script></a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
