@@ -21,6 +21,7 @@ function drop(ev){
 
 
 		var currentState =  stateStack.pop();
+		stateStack.push(cloneObject(currentState));
 		if (currentState == undefined) {
 			currentState = [];
 		}
@@ -28,7 +29,6 @@ function drop(ev){
 		var containsDrink = false;
 		for (var i = 0; i < currentState.length; i++) {
 			var entry = currentState[i];
-			console.log(entry.drink);
 			if (entry["drink"]["id"] === beerData.id) {
 				entry.amount++;
 				containsDrink = true;
@@ -42,4 +42,17 @@ function drop(ev){
 		stateStack.push(currentState);
 	}
 
+}
+
+function cloneObject(obj) {
+	if (obj === null || typeof obj !== 'object') {
+		return obj;
+	}
+
+	var temp = obj.constructor(); // give temp the original obj's constructor
+	for (var key in obj) {
+		temp[key] = cloneObject(obj[key]);
+	}
+
+	return temp;
 }

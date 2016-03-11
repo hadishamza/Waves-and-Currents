@@ -81,7 +81,7 @@ var baseUrl;
             $scope.stateStack = [];
 
             setInterval(function() {
-                $scope.stateStack = stateStack[0];
+                $scope.stateStack = stateStack[stateStack.length - 1];
                 $scope.$apply();
             }, 50);
 
