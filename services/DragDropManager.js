@@ -72,3 +72,7 @@ function redo() {
 		stateStack.push(state);
 	}
 }
+
+function clearTray() {
+	stateStack.push([]);
+}
