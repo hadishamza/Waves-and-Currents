@@ -1,5 +1,6 @@
 //remember <script src="../../services/DragDropManager.js"></script>
 // fix selectors
+var stateStack = [];
 
 function allowDrop(ev) {
     ev.preventDefault();
@@ -7,23 +8,38 @@ function allowDrop(ev) {
 
 function drag(ev){
 	ev.dataTransfer.setData("element", ev.currentTarget.id);
-	console.log("drag");
 }
 
 function drop(ev){
 	ev.preventDefault();
-	console.log("drop");
 	var data = ev.dataTransfer.getData("element");
-	console.log(data);
 	if(data){
 		var beerData = $("#"+data).data("beer"); // gather beer data through data-tag
-		var el = $("<li class='list-group-item'><div class='listContent'></div>Amount: <input type='number' min='1' value='1' style='width:50px'></li>"); // create list element
-		el.data("beer", beerData);
-		var listContent = $(el[0].children[0]);
-		var inputContent = $(el[0].children[1])
-		listContent.text(beerData.name + " - " + beerData.price + "kr"); // add text to list content
-		inputContent.attr("max", beerData.count); // To make sure that you cannot order more beers than the amount in inventory
-		$(".list-group").append(el); // append list element
+
+		var appElement = document.querySelector('[ng-app=mainApp]');
+		var $scope = angular.element(appElement).scope();
+
+
+		var currentState =  stateStack.pop();
+		if (currentState == undefined) {
+			currentState = [];
+		}
+
+		var containsDrink = false;
+		for (var i = 0; i < currentState.length; i++) {
+			var entry = currentState[i];
+			console.log(entry.drink);
+			if (entry["drink"]["id"] === beerData.id) {
+				entry.amount++;
+				containsDrink = true;
+			}
+		}
+
+		if (!containsDrink) {
+			currentState.push({"drink":beerData, "amount":1});
+		}
+
+		stateStack.push(currentState);
 	}
 
 }

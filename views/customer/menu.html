@@ -58,7 +58,13 @@
                                     </span>
                                 </div>
                                 <div id="tray" style="height: 82.8%">
-                                    <ul class="list-group" ondragover="allowDrop(event)" ondrop="drop(event)"></u>
+                                    <!--<div>{{ stateStack }}</div>-->
+                                    <ul class="list-group" ondragover="allowDrop(event)" ondrop="drop(event)">
+                                        <li class='list-group-item' ng-repeat="entry in stateStack">
+                                            <div>{{ entry.drink.name }}</div>
+                                            Amount: <input type='number' min='1' value='{{ entry.amount }}' style='width:50px'>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div id="trayControl">
                                     <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
@@ -134,3 +140,5 @@
         </div>
     </div>
 </div>
+
+{{ console.log(stateStack) }}
