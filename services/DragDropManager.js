@@ -41,6 +41,7 @@ function drop(ev){
 		}
 
 		stateStack.push(currentState);
+		stateStackRedo = [];
 	}
 
 }
