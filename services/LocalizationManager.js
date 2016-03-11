@@ -16,15 +16,20 @@ if(sessionStorage.getItem('localeData') === null){
     });    
 } else {
     currentLocaleJSON = JSON.parse(sessionStorage.getItem('localeData'));
-alert("");}
+;}
 
 // Help function for when setting the locale (e.g. button press)
 function setLocaleAux(locale){
     setLocale(locale, function(success, data){
         if (success){
-            alert("Setting local Aux function");
             sessionStorage.setItem('localeData', JSON.stringify(data));
-            location.reload();
+            if (sessionStorage.usertype == "Admin"){
+                location.assign("/Waves-and-Currents/views/admin/main.html");
+            } else if (sessionStorage.usertype == "Customer"){
+                location.assign("/Waves-and-Currents/views/customer/main.html");
+            } else if (sessionStorage.usertype == ""){
+                location.reload();
+            }
         }
         else{
             console.log("Setting local failed");

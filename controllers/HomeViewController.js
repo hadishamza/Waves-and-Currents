@@ -8,9 +8,11 @@ function logInAndRegisterCurrentUser(userName, password) {
         if (success) {
             currentUser = response;
             if (response instanceof Administrator) {
-                window.location = "../admin/main.html";
+                sessionStorage.usertype = "Admin";
+                window.location = "/Waves-and-Currents/views/admin/main.html";
             } else {
-                window.location = "../customer/main.html";
+                sessionStorage.usertype = "Customer";
+                window.location = "/Waves-and-Currents/views/customer/main.html";
             }
         }
     })
