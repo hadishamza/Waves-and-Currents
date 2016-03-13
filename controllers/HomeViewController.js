@@ -14,6 +14,9 @@ function logInAndRegisterCurrentUser(userName, password) {
                 sessionStorage.usertype = "Customer";
                 window.location = "/Waves-and-Currents/views/customer/main.html";
             }
+        } else {
+            $('#login-error-message').fadeIn();
+            $('#login-error-message').delay(3500).fadeOut();
         }
     })
 }
