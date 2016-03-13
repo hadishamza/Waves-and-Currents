@@ -19,7 +19,7 @@
                                         <div class="tile" id="{{ x.id }}" ondragstart="drag(event)" draggable="true" data-toggle="modal" data-target="#beverageDetailModal" data-beer="{{ x }}">
                                             <div class="row">
                                                 <div class="col-md-12 square">
-                                                    <img class="squareContent" src="{{ menu.baseUrl + '/views/assets/images/beverage-icons/beer-' + ($index % 29 + 1)  + '.svg' }}">
+                                                    <img class="squareContent" src="{{ menu.baseUrl + '/views/assets/images/beverage-icons/beer-' + (x.id % 29 + 1)  + '.svg' }}">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -73,7 +73,7 @@
                                                     <div class="col-md-12" style="padding: 0px">
                                                         <div class="pull-right">
                                                             <span style="position:relative ;top: 1px; display: inline-block">KR {{ entry.drink.price }}</span> ×
-                                                            <input type='number' min='1' value='{{ entry.amount }}' style='width:50px;'>
+                                                            <input data-drink="{{entry.drink}}" oninput="updateDrinkAmount(this)" type='number' min='1' value='{{ entry.amount }}' style='width:50px;'>
                                                         </div>
                                                     </div>
                                                 </div>

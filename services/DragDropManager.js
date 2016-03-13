@@ -73,7 +73,6 @@ function clearTray() {
 }
 
 function removeDrinkFromTray(id) {
-	console.log(id);
 	if(id){
 		var currentState =  stateStack.pop();
 		stateStack.push(cloneObject(currentState));
@@ -82,7 +81,30 @@ function removeDrinkFromTray(id) {
 			return entry.drink.id !== id;
 		});
 
-		console.log(currentState);
+		stateStack.push(currentState);
+		stateStackRedo = [];
+	}
+}
+
+function updateDrinkAmount(element) {
+	var drink = JSON.parse(element.dataset.drink);
+	updateAmountForDrink(drink.id, element.value);
+}
+
+function updateAmountForDrink(id, newAmount) {
+	if(id && newAmount){
+		var currentState =  cloneObject(stateStack[stateStack.length - 1]);
+		var containsDrink = false;
+		for (var i = 0; i < currentState.length; i++) {
+			var entry = currentState[i];
+			if (entry["drink"]["id"] === id) {
+				if (entry.amount == newAmount) {
+					return;
+				}
+				entry.amount = newAmount;
+				containsDrink = true;
+			}
+		}
 
 		stateStack.push(currentState);
 		stateStackRedo = [];
