@@ -27,7 +27,7 @@ function setLocaleAux(locale){
                 location.assign("/Waves-and-Currents/views/admin/main.html");
             } else if (sessionStorage.usertype == "Customer"){
                 location.assign("/Waves-and-Currents/views/customer/main.html");
-            } else if (sessionStorage.usertype == ""){
+            } else {
                 location.reload();
             }
         }
