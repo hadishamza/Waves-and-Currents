@@ -56,8 +56,13 @@ function cloneObject(obj) {
 
 function undo() {
 	if (stateStack.length > 0) {
-		var state = stateStack.pop();
-		stateStackRedo.push(state);
+		var backup = stateStack;
+		stateStack = [];
+		setTimeout(function(){
+			stateStack = backup;
+			var state = stateStack.pop();
+			stateStackRedo.push(state);
+		}, 10);
 	}
 }
 

@@ -83,7 +83,7 @@ var baseUrl;
             setInterval(function() {
                 $scope.stateStack = stateStack[stateStack.length - 1];
                 $scope.$apply();
-            }, 50);
+            }, 10);
 
             $scope.removeDrinkFromTray = function(id) {
                 removeDrinkFromTray(id);
