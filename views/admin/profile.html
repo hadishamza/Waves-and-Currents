@@ -27,18 +27,19 @@
                             <div class="content">
                                 <table class="fixed_headers">
                                     <thead>
-                                        <tr class="row">
+                                        <tr class="userTableRow">
+                                            <td><input type="checkbox"></td>
                                             <td><strong>Name</strong></td>
                                             <td><strong>User Name</strong></td>
                                             <td><strong>Privilege</strong></td>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="userTableRow" ng-repeat="user in profile.users" data-toggle="modal" data-target="#userModal" data-user="{{ user }}">
+                                        <tr class="userTableRow" ng-repeat="user in profile.users">
                                             <td><input type="checkbox"></td>
-                                            <td id="name">{{ user.firstName + " " + user.lastName }}</td>
-                                            <td id="userName">{{ user.userName }}</td>
-                                            <td id="role">{{ user.role}}</td>
+                                            <td id="name" data-toggle="modal" data-target="#userModal" data-user="{{ user }}">{{ user.firstName + " " + user.lastName }}</td>
+                                            <td id="userName" data-toggle="modal" data-target="#userModal" data-user="{{ user }}">{{ user.userName }}</td>
+                                            <td id="role" data-toggle="modal" data-target="#userModal" data-user="{{ user }}">{{ user.role}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
