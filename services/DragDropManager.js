@@ -56,6 +56,14 @@ function cloneObject(obj) {
 
 function undo() {
 	if (stateStack.length > 0) {
+		// TODO: Find better ways to update view when undo the user-manually-input amount
+		// 1. This is a 'hack' currently. The bound view won't update until the array becomes empty.
+		// Therefore, to make it work, I empty the array first then put in meaningful data
+		// There is a 10 ms timeout because the view is updated every 5ms
+		// 2. When user manually input some amount, the observing method is 'oninput' of the text field
+		// instead of 'ng-change'. This is because ng-change will create a dead loop: ng-change calls for
+		// model update, then model update leads to the value update in the view, then the value update
+		// calls for ng-change again.
 		var backup = stateStack;
 		stateStack = [];
 		setTimeout(function(){
