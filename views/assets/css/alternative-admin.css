@@ -1,7 +1,12 @@
+body{
+    background-color: gray;
+}
+
 #login-box {
     padding-top: 5%;
     position: static;
 }
+
 
 .login-button {
     width: 100%;
@@ -87,27 +92,27 @@
 	color: red;
 }
 
-#menuPage .nav {
+#inventoryPage .nav {
     border-radius: 5px;
     border: black solid 1px;
 }
 
-#menuPage .nav li a {
+#inventoryPage .nav li a {
     color: #9d9d9d;
     border-radius: 0px;
 }
 
-#menuPage .nav li a:hover {
+#inventoryPage .nav li a:hover {
     color: white;
     background-color:transparent;
 }
 
-#menuPage .nav li a:focus {
+#inventoryPage .nav li a:focus {
     color:white;
     background-color:black;
 }
 
-#menuPage .textField {
+#inventoryPage .textField {
     background: #222;
     border-radius: 5px;
     border: #111 solid 1px;
@@ -119,7 +124,7 @@
     margin-bottom: 15px;
 }
 
-#menuPage .textField:focus {
+#inventoryPage .textField:focus {
     outline-width: 0;
     border-color: white;
 }
@@ -136,10 +141,10 @@
 	border-radius: 4px 4px 4px 4px;
 	background: #222;
     border: black solid 1px;
-	height: 100%;
+	height: calc(100% - 55px);
     color: white;
     padding:0px 15px 0px 30px;
-	overflow-x: hidden;
+	overflow: scroll;
 }
 
 #centralContent .tileContainer {
@@ -149,7 +154,9 @@
 #centralContent .tileContainer:nth-child(1),
 #centralContent .tileContainer:nth-child(2),
 #centralContent .tileContainer:nth-child(3),
-#centralContent .tileContainer:nth-child(4) {
+#centralContent .tileContainer:nth-child(4),
+#centralContent .tileContainer:nth-child(5),
+#centralContent .tileContainer:nth-child(6) {
 	margin-top: 15px;
 }
 
@@ -234,16 +241,6 @@
 	border-radius: 3px;
 }
 
-#tray{
-	border-top: black solid 0.5px;
-	border-bottom: black solid 0.5px;
-	height: 400px;
-}
-#trayControl{
-    margin: 10px;
-    width: calc(100% - 20px);
-}
-
 .square {
     position: relative;
     width: 100%;
@@ -262,27 +259,120 @@
     width: 50%;
     margin-left: 17.5%;
 }
-.list-group{
-    margin-left: 10px;
-    margin-right: 10px;
-    color: black;
-    height: 100%;
+
+
+#profilePage .content {
+    border-radius: 4px 4px 4px 4px;
+    background: #222;
+    border: black solid 1px;
+    height: calc(100% - 55px);
+    color: white;
+    padding:0px;
+    overflow: scroll;
 }
 
-/* Small css changes for alternative style */
-html body{
-    background: wheat !important;
-    color: wheat; 
+#profilePage .nav {
+    border-radius: 5px;
+    border: black solid 1px;
 }
 
-.leftMenu, #welcomePage, .container-fluid,
-#rightMenu, #search, .list-group-item, #centralContent {
-    background: brown !important;
+#profilePage .nav li a {
+    color: #9d9d9d;
+    border-radius: 0px;
 }
 
-#welcomePage, .list-group-item {
-    color: wheat !important;
+#profilePage .nav li a:hover {
+    color: white;
+    background-color:transparent;
 }
-.pull-right > input{
-    color: black !important;
+
+#profilePage .nav li a:focus {
+    color:white;
+    background-color:black;
+}
+
+#profilePage .textField {
+    background: #222;
+    border-radius: 5px;
+    border: #111 solid 1px;
+    width: 100%;
+    height: 40px;
+    padding:10px;
+    color: #fff;
+
+    margin-bottom: 15px;
+}
+
+#profilePage .textField:focus {
+    outline-width: 0;
+    border-color: white;
+}
+
+#profilePage .textFeildButton {
+    height: 40px;
+    width: 100%;
+    line-height: 26px;
+}
+
+#profilePage .userTableRow {
+    line-height: 40px;
+}
+
+.fixed_headers {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.fixed_headers th {
+    text-decoration: underline;
+}
+.fixed_headers th,
+.fixed_headers td {
+    padding: 5px;
+    text-align: center;
+}
+
+.fixed_headers tbody tr:hover {
+    font-weight: 600;
+    color: lightseagreen;
+    cursor: pointer;
+}
+
+.fixed_headers td:nth-child(1),
+.fixed_headers th:nth-child(1) {
+    min-width: 50px;
+}
+.fixed_headers td:nth-child(2),
+.fixed_headers th:nth-child(2) {
+    min-width: 400px;
+    text-align: left;
+}
+.fixed_headers td:nth-child(3),
+.fixed_headers th:nth-child(3) {
+    width: 350px;
+}
+
+.fixed_headers td:nth-child(4),
+.fixed_headers th:nth-child(4) {
+    width: 100px;
+}
+
+.fixed_headers thead {
+    background-color: #333;
+    color: #FDFDFD;
+    line-height: 40px;
+}
+.fixed_headers thead tr {
+    display: block;
+    position: relative;
+}
+.fixed_headers tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 493px;
+}
+
+#userModal input {
+    width:100%;
 }
