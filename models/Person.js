@@ -1,5 +1,8 @@
 /**
  * Created by Jinghan on 9/2/16.
+ *
+ * Person is an entity containing 5 attributes: firstName, lastName, id, userName and password
+ * It is also accociated with two dedicated methods: getInventoryList and getDrinkData
  */
 "use strict"
 

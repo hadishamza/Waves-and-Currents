@@ -1,10 +1,14 @@
 /**
  * Created by Jinghan on 8/2/16.
+ *
+ * BackendManager provides the services which is used to interact with backend.
  */
 
 var baseURL = "http://pub.jamaica-inn.net/fpdb/api.php"
 var currentUser;
 
+
+// The traditional ajax get.
 function GET(person, action, data, completion) {
 
     if (action == undefined) {
@@ -32,6 +36,7 @@ function GET(person, action, data, completion) {
     });
 }
 
+// Login to the session
 function logIn(userName, password, completion) {
     // a little hack here, use 'payments_get_all' we can check whether
     // the password is correct as well as the role of the logged in user

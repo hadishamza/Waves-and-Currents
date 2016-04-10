@@ -1,5 +1,7 @@
 /**
  * Created by Jinghan on 8/2/16.
+ *
+ * Drink is an entity containting 5 attributes: name, altName, price, count and id
  */
 "use strict"
 

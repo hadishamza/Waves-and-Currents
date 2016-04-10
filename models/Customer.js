@@ -1,5 +1,9 @@
 /**
  * Created by Jinghan on 8/2/16.
+ *
+ * Customer is a subclass of Person.
+ * It has several additional methods: getPurchases, getPayments, getCredits, getAccountInfo and
+ * buyDrink.
  */
 "use strict"
 

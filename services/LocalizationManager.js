@@ -1,5 +1,8 @@
 /**
  * Created by Jinghan on 9/2/16.
+ *
+ * LocalizationManager provides localization services
+ * The locale sources used here is stored in ../localizations
  */
 var currentLocaleJSON;
 var defaultLocale = "english";

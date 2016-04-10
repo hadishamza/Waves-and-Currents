@@ -1,3 +1,5 @@
+//StyleManager provides possibilities to switch between different style
+
 function setStyleSheet(sheet) {
     $("#stylesheet").attr("href",sheet);
     sessionStorage.setItem("stylesheet", sheet);

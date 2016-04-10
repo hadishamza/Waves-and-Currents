@@ -1,8 +1,13 @@
+// DragDropManager provides services including drag and drop and the accociated undo and redo.
+
 //remember <script src="../../services/DragDropManager.js"></script>
 // fix selectors
+
+//The two stack: undo stack and redo stack
 var stateStack = [];
 var stateStackRedo = [];
 
+// MARK Drag & Drop
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -36,11 +41,17 @@ function drop(ev){
 			currentState.push({"drink":beerData, "amount":1});
 		}
 
+		//update currentState to undo stack
 		stateStack.push(currentState);
+		//clear redo stack whenever the current state is changed
 		stateStackRedo = [];
 	}
 }
 
+
+// MARK: undo & redo
+
+// This is a utility function which deep clone an javascript object
 function cloneObject(obj) {
 	if (obj === null || typeof obj !== 'object') {
 		return obj;
@@ -54,6 +65,7 @@ function cloneObject(obj) {
 	return temp;
 }
 
+//undo current state
 function undo() {
 	if (stateStack.length > 0) {
 		// TODO: Find better ways to update view when undo the user-manually-input amount
@@ -74,6 +86,7 @@ function undo() {
 	}
 }
 
+//redo current state
 function redo() {
 	if (stateStackRedo.length > 0) {
 		var state = stateStackRedo.pop();
@@ -81,10 +94,12 @@ function redo() {
 	}
 }
 
+//remove all current contents in tray
 function clearTray() {
 	stateStack.push([]);
 }
 
+//remove certain drink from current tray
 function removeDrinkFromTray(id) {
 	if(id){
 		var currentState =  stateStack.pop();
@@ -99,6 +114,7 @@ function removeDrinkFromTray(id) {
 	}
 }
 
+//update the amount for a certain drink in current tray
 function updateDrinkAmount(element) {
 	var drink = JSON.parse(element.dataset.drink);
 	updateAmountForDrink(drink.id, element.value);
