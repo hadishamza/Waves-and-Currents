@@ -25,8 +25,17 @@
 
     <script src="../../controllers/HomeViewController.js"></script>
     <script src="../../libraries/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<!--
+
+Declaring the customer main app called "mainApp" and adding the appropriate controller for it called "MainViewController"
+
+-->
 
 <body ng-app="mainApp"  ng-controller="MainViewController as main">
+
+<!-- Creating the navbar at the top of the page -->
     <div id="header">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -34,6 +43,8 @@
                     <a class="navbar-brand" href="#">Flying Dutchman</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <!-- Creating the left part of the navbar -->
                     <ul class="nav navbar-nav">
                         <li class="active">
                             <a href="/home"><script>writeLocalizedString("home")</script><span class="sr-only">(current)</span></a>
@@ -45,6 +56,7 @@
                         <li><a href="#"><script>writeLocalizedString("messages")</script></a></li>
                     </ul>
 
+                    <!-- Creating the right part of the navbar  with two dropdown menus. One menu for themes and one for languages-->
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><script>writeLocalizedString("themes")</script><span class="caret"></span></a>

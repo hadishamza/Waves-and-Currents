@@ -27,6 +27,7 @@ Creating the SPA area (inventory) to be updated by the controller called "AdminI
                                 </div>
                             </div>
 
+                            <!-- Creating the central content to be updated. Listing the beverages -->
                             <div id="centralContent">
                                 <div class="row scrollableBlock">
                                     <div id="$index" class="col-md-2 tileContainer" ng-repeat="x in inventory.currentBeverageList | filter : search | filter : countFilter">
@@ -112,6 +113,8 @@ Creating the SPA area (inventory) to be updated by the controller called "AdminI
                     </tr>
                 </table>
             </div>
+
+            <!-- Creating the the buttons in the updating the beverages info. Such as remove from inventory, cancel and save changes. -->
             <div class="modal-footer">
                 KR <input class="modal-title" id="beverageDetailLabelPrice"></input>
                 <br><br>

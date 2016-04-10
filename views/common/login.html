@@ -1,3 +1,9 @@
+<!--
+
+ Creating the login page that every user will be greeted with.
+
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +32,8 @@
 
 </head>
 <body>
+
+<!-- Create the navbar that is always shown at the top of the page -->
 <div id="header">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -34,6 +42,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+
+                    <!-- Creating a dropdown menu for the different themes that are available -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">
@@ -48,6 +58,8 @@
                             </a></li>
                         </ul>
                     </li>
+
+                    <!-- Creating another dropdown menu for the languages that are available -->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">
@@ -71,6 +83,8 @@
 </div>
 
 <br><br>
+
+<!-- Creating the login box that is centered at the current page -->
 <div class="container" id="login-box">
     <div style="width: 40%; margin: 0 auto;">
 
@@ -112,6 +126,7 @@
                             <script>writeLocalizedString("continueButton")</script>
                         </div>
                     </div>
+                    <!--    SUCCESS MESSAGE  -->
                     <div class="col-xs-6">
                         <div class="btn btn-success login-button"
                              onclick="logInAndRegisterCurrentUser($('#username_Field').val(), $('#password_Field').val())">
@@ -123,6 +138,7 @@
             </div>
         </form>
     </div>
+    <!-- ERROR MESSAGE - Wrong password or username -->
     <div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert" id="login-error-message" style="display: none; text-align: center">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <strong>Error!</strong> Incorrect Username or Password

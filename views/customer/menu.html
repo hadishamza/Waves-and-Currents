@@ -1,3 +1,8 @@
+<!--
+
+Creating the menu that will be shown to the customer that lists the beverages, the search bar, the undo redo for the shopping cart
+
+-->
 <div ng-controller="CustomerMenuViewController" id="menuPage" style="height: 100%">
     <div class="row" style="height: 100%">
         <div class="col-md-12" style="height: 100%">
@@ -5,6 +10,8 @@
 
                 <div class="col-md-9" style="height: 100%">
                     <div class="row" style="height: 100%">
+
+                        <!-- The beverage list at the left of the view field -->
                         <div class="col-md-2" style="height: 100%">
                             <ul class="nav nav-pills nav-stacked navbar-inverse leftMenu" style="height: 100%;">
                                 <li role="presentation"><a href="#">Beer</a></li>
@@ -12,6 +19,7 @@
                                 <li role="presentation"><a href="#">Wine</a></li>
                             </ul>
                         </div>
+                        <!-- The view field containing the beverages being shown to the customer -->
                         <div class="col-md-10" style="height: 100%; padding:0px">
                             <div id="centralContent">
                                 <div class="row scrollableBlock">

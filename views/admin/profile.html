@@ -1,9 +1,17 @@
+<!--
+
+Creating the admin profile page which will be controlled by the angular controller called "AdminProfileViewController"
+
+-->
+
 <div ng-controller="AdminProfileViewController" id="profilePage" style="height: 100%">
     <div class="row" style="height: 100%">
         <div class="col-md-12" style="height: 100%">
             <div class="row" style="height: 100%">
                 <div class="col-md-12" style="height: 100%">
                     <div class="row" style="height: 100%">
+
+                        <!-- Creating the a div to list the types of users available. -->
                         <div class="col-md-2" style="height: 100%">
                             <ul class="nav nav-pills nav-stacked navbar-inverse" style="height: 100%;">
                                 <li role="presentation"><a href="#">All</a></li>
@@ -11,6 +19,8 @@
                                 <li role="presentation"><a href="#"">User</a></li>
                             </ul>
                         </div>
+
+                        <!-- Adding the options that can be done to the different users. Search for, remove selected and add new -->
                         <div class="col-md-10" style="height: 100%; padding-left:0px">
                             <div class="row">
                                 <div class="col-md-8">
@@ -24,6 +34,7 @@
                                 </div>
                             </div>
 
+                            <!-- Create the div containing the different rows of the different types of information stored. -->
                             <div class="content">
                                 <table class="fixed_headers">
                                     <thead>
@@ -51,6 +62,12 @@
         </div>
     </div>
 </div>
+
+<!--
+
+ The content area to be updated when changing the password of a specific user.
+
+ -->
 
 <div class="modal fade" id="userModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
